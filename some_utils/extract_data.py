@@ -1,9 +1,9 @@
 import datetime
 
 
-def date_from_filename(filename: str):
+def date_from_filename(filename: str, final_part: int = -3):
     try:
-        date_part = filename.split('_')[-3]
+        date_part = filename.split('_')[final_part]
         year: int = int(date_part[:4])
         month: int = int(date_part[4:6])
         day: int = int(date_part[6:8])

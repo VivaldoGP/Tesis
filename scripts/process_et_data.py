@@ -9,7 +9,7 @@ import os
 
 from some_utils.extract_data import date_from_filename
 
-agera_path = r"C:\Users\Isai\Documents\Tesis\code\agera5_data"
+agera_path = r"C:\Users\Isai\Documents\Tesis\code\agera5data"
 puntos_path = r"C:\Users\Isai\Documents\Tesis\Tesis\Parcelas\centroides\centroides.shp"
 
 et_path = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\evapotranspiration"
@@ -19,7 +19,8 @@ parcelas_df = {}
 for file in os.listdir(agera_path):
     if file.endswith('.tif'):
         full_path = os.path.join(agera_path, file)
-        fecha = date_from_filename(filename=full_path)
+        fecha = date_from_filename(filename=full_path, final_part=-1)
+        print(fecha, full_path)
 
         with rasterio.open(full_path) as isrc:
             transform = isrc.transform

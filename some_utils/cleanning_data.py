@@ -12,7 +12,7 @@ def harvest_dates(data: DataFrame, start_date: datetime.date, end_date: datetime
         end_date (datetime.date): Fecha de fin del rango.
     """
     data['Fecha'] = data['Fecha'].astype('datetime64[ns]')
-    data = data[(data['Fecha'] >= start_date) & (data['Fecha'] <= end_date)]
+    data = data[(data['Fecha'] > start_date) & (data['Fecha'] <= end_date)]
     data = data.sort_values(by=['Fecha'], ascending=True)
 
     return data
