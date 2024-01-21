@@ -43,7 +43,7 @@ indices_stats = []
 for i in parcel_image_list:
     with mem.open() as src:
         for features_ in src:
-            if i.get("Parcela_dir") == "Parcela_2":
+            if i.get("Parcela_dir") == "Parcela_16":
                 if features_["properties"]["Id"] == i.get("Parcela_id"):
                     try:
                         with rasterio.open(i.get("Img_path")) as isrc:
@@ -94,4 +94,4 @@ for i in parcel_image_list:
 # print(ndvi_stats)
 
 ndvi_df = pd.DataFrame(indices_stats)
-ndvi_df.to_csv(r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\indices_stats\parcela_2.csv", index=False)
+ndvi_df.to_csv(r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\indices_stats\parcela_16.csv", index=False)

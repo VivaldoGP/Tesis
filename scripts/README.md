@@ -37,3 +37,10 @@ y los archivos que contienen las fechas de las imágenes con nubes y las fechas 
 - [fechas_claves]()
 
 Las funciones que utiliza el script mencionado anteriormente están en el package [some_utils]().
+
+## Unión de los datos
+
+Una vez que tienen los datos limpios y se cuenta con los valores de la evapotranspiración se procede a realizar la unión
+de ambos conjuntos de datos, para esto se desarrolló el script [merge_data.py](), el cual realiza la unión de los datos
+mediante la columna **fecha**, la cual es común en ambos conjuntos de datos, el resultado es un archivo csv con los datos
+de cada parcela y su respectiva evapotranspiración para cada fecha.
