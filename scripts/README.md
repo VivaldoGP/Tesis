@@ -44,3 +44,10 @@ Una vez que tienen los datos limpios y se cuenta con los valores de la evapotran
 de ambos conjuntos de datos, para esto se desarrolló el script [merge_data.py](), el cual realiza la unión de los datos
 mediante la columna **fecha**, la cual es común en ambos conjuntos de datos, el resultado es un archivo csv con los datos
 de cada parcela y su respectiva evapotranspiración para cada fecha.
+
+## Calculo de la evapotranspiración
+
+Para calcular la evapotranspiración del cultivo se tomó como base la evapotranspiración de referencia obtenida del 
+dataset agERA5, tomando el promedio del **ndvi** de cada parcela y multiplicando por los factores correspondientes se obtuvo
+el coeficiente de cultivo y se multiplicó por la evapotranspiración de referencia para obtener la evapotranspiración del cultivo.
+El script encargado de realizar esta tarea es [kc_et.py]().

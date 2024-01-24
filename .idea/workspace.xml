@@ -4,54 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b316ec0b-25cc-4998-add2-6d0afdb78e06" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/code.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/centroides/centroides.cpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/centroides/centroides.dbf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/centroides/centroides.prj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/centroides/centroides.qmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/centroides/centroides.shp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/centroides/centroides.shx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/poligonos_parcelas.geojson" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/poligonos_parcelas/poligonos.cpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/poligonos_parcelas/poligonos.dbf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/poligonos_parcelas/poligonos.prj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/poligonos_parcelas/poligonos.qmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/poligonos_parcelas/poligonos.shp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parcelas/poligonos_parcelas/poligonos.shx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_1.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_2.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fechas_claves/clouds.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fechas_claves/harvest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plot_utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/plot_utils/charts.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/raster_utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/raster_utils/spectral_indices.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/agera5_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/ee_fecth_images.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/prepare_data..py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/process_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/process_et_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/some_utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/some_utils/cleanning_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/some_utils/extract_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats_utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stats_utils/regression_models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_cleanning.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_dates.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test_plotting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vector_utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vector_utils/geopro_tools.py" afterDir="false" />
+    <list default="true" id="b316ec0b-25cc-4998-add2-6d0afdb78e06" name="Changes" comment="file: precleaned data">
+      <change afterPath="$PROJECT_DIR$/fechas_claves/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fechas_claves/clouds.json" beforeDir="false" afterPath="$PROJECT_DIR$/fechas_claves/clouds.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_plotting.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,26 +40,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python tests.Python tests for test_cleanning.MyTestCase.test_remove_clouds.executor": "Run",
-    "Python tests.Python tests for test_dates.MyTestCase.test_remove_clouds.executor": "Run",
-    "Python tests.Python tests for test_dates.MyTestCase.test_something.executor": "Run",
-    "Python tests.Python tests for test_plotting.MyTestCase.executor": "Run",
-    "Python tests.Python tests for test_plotting.MyTestCase.test_plotting.executor": "Run",
-    "Python.prepare_data..executor": "Run",
-    "Python.process_data.executor": "Run",
-    "Python.test.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "editor.preferences.tabs"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for test_cleanning.MyTestCase.test_remove_clouds.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_dates.MyTestCase.test_remove_clouds.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_dates.MyTestCase.test_something.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_plotting.executor&quot;: &quot;Run&quot;,
+    &quot;Python.agera5_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.kc_et.executor&quot;: &quot;Run&quot;,
+    &quot;Python.merge_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.prepare_data (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.prepare_data..executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_et_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Python.prepare_data.">
-    <configuration name="prepare_data." type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+}</component>
+  <component name="RunManager" selected="Python tests.Python tests for test_plotting.MyTestCase.test_plotting">
+    <configuration name="kc_et" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,7 +77,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/prepare_data..py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/kc_et.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -122,7 +86,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="process_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="merge_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -135,7 +99,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/process_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/merge_data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -144,34 +108,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_cleanning.MyTestCase.test_remove_clouds" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="prepare_data (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_cleanning.MyTestCase.test_remove_clouds&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/prepare_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_plotting.MyTestCase" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="process_et_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_plotting.MyTestCase&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/process_et_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Python tests for test_plotting.MyTestCase.test_plotting" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
@@ -191,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.prepare_data." />
-        <item itemvalue="Python.process_data" />
         <item itemvalue="Python tests.Python tests for test_plotting.MyTestCase.test_plotting" />
-        <item itemvalue="Python tests.Python tests for test_plotting.MyTestCase" />
-        <item itemvalue="Python tests.Python tests for test_cleanning.MyTestCase.test_remove_clouds" />
+        <item itemvalue="Python.kc_et" />
+        <item itemvalue="Python.merge_data" />
+        <item itemvalue="Python.prepare_data (1)" />
+        <item itemvalue="Python.process_et_data" />
       </list>
     </recent_temporary>
   </component>
@@ -215,9 +193,58 @@
       <option name="presentableId" value="Default" />
       <updated>1705729547808</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <option name="closed" value="true" />
+      <created>1705737291193</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705737291193</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat: updates">
+      <option name="closed" value="true" />
+      <created>1705804914012</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705804914012</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: ignore dirs">
+      <option name="closed" value="true" />
+      <created>1705805056555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705805056555</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: precleaned data">
+      <option name="closed" value="true" />
+      <created>1705816076639</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1705816076639</updated>
+    </task>
+    <task id="LOCAL-00005" summary="file: precleaned data">
+      <option name="closed" value="true" />
+      <created>1705816141520</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705816141520</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <MESSAGE value="feat: updates" />
+    <MESSAGE value="feat: ignore dirs" />
+    <MESSAGE value="feat: precleaned data" />
+    <MESSAGE value="file: precleaned data" />
+    <option name="LAST_COMMIT_MESSAGE" value="file: precleaned data" />
   </component>
 </project>
