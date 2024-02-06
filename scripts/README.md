@@ -51,3 +51,9 @@ Para calcular la evapotranspiración del cultivo se tomó como base la evapotran
 dataset agERA5, tomando el promedio del **ndvi** de cada parcela y multiplicando por los factores correspondientes se obtuvo
 el coeficiente de cultivo y se multiplicó por la evapotranspiración de referencia para obtener la evapotranspiración del cultivo.
 El script encargado de realizar esta tarea es [kc_et.py]().
+
+## Delimitación de los datos meteorológicos
+
+Una vez que se tienen los datos meteorológicos se procede a delimitar el rango de fechas que se utilizarán para el análisis, en este 
+caso las fechas establecidas en el archivo [harvest_dates.json](), el script que realiza esta tarea es [climate_process.py]() y su función
+es 'recortar' el dataframe a las fechas establecidas en el archivo mencionado.
