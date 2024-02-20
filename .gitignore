@@ -1,2 +1,4 @@
 .venv
-agera5data
+/agera5data/
+/precipitation/
+/temperature/
