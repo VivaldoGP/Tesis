@@ -52,6 +52,12 @@ dataset agERA5, tomando el promedio del **ndvi** de cada parcela y multiplicando
 el coeficiente de cultivo y se multiplicó por la evapotranspiración de referencia para obtener la evapotranspiración del cultivo.
 El script encargado de realizar esta tarea es [kc_et.py]().
 
+## Última preparación de los datos
+
+Se tienen las diferentes variables para cada una parcela respecto a cada fecha, pero es necesario conocer los días
+transcurridos a partir de la primera fecha, para esto se desarrolló el script [counting_days.py](), el cual realiza esta
+tarea y exporta un nuevo archivo csv a la carpeta [ready_to_analyze]().
+
 ## Delimitación de los datos meteorológicos
 
 Una vez que se tienen los datos meteorológicos se procede a delimitar el rango de fechas que se utilizarán para el análisis, en este 
