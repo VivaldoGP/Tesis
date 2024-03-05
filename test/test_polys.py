@@ -9,10 +9,12 @@ from sklearn.model_selection import train_test_split
 from sklearn.pipeline import make_pipeline
 import matplotlib.pyplot as plt
 import os
+import statsmodels.api as sm
+from statsmodels.tools.eval_measures import rmse, mse
 
 
 root = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\ready_to_analyze"
-parcela = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\ready_to_analyze\parcela_5.csv"
+parcela = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\ready_to_analyze\parcela_1.csv"
 
 class MyTestCase(unittest.TestCase):
     def test_model_degree(self):
@@ -168,13 +170,59 @@ class MyTestCase(unittest.TestCase):
             print(x_poly_train.size)
             print(x_poly_train)
             x_poly_test = poly_features.transform(x_test)
+            print(x_poly_test)
+
+            model = sm.OLS(y_train, sm.add_constant(x_poly_train)).fit()
+            y_pred = model.predict(sm.add_constant(x_poly_test))
+            mse_statsmodel = mse(y_test, y_pred)
+
+            mse_test = mean_squared_error(y_test, model.predict(sm.add_constant(x_poly_test)))
+            r2_test = r2_score(y_test, model.predict(sm.add_constant(x_poly_test)))
+            print(f"""Grado: {grado}, MSE: {mse_test}, R2: {r2_test, model.rsquared}""")
+            num_params = x_poly_train.shape[1]
+
+            print(f"aic: {model.aic}")
+            print(f"params: {model.params}")
+            print(f"rsquared: {model.rsquared}, mse: {mse_statsmodel}")
+            print(model.summary())
+            #aic_values.append(model.aic)
+        ''''
+        plt.plot(grados, aic_values, label='AIC')
+        plt.xlabel('Grado del polinomio')
+        plt.ylabel('AIC')
+        plt.title('AIC vs Grado del polinomio')
+        plt.legend()
+        plt.show()
+        '''
+        #grado_optimo = grados[np.argmin(aic_values)]
+        #print(aic_values)
+        #print(f'Grado óptimo: {grado_optimo}')
+
+
+    def test_akaike2(self):
+        df = pd.read_csv(parcela)
+        x = df['Dia'].values.reshape(-1, 1)
+        y = df['ndvi_mean'].values
+
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+        print(x_train)
+        grados = np.arange(1, 10)
+        aic_values = []
+
+        for grado in grados:
+            poly_features = PolynomialFeatures(degree=grado, include_bias=False)
+            x_poly_train = poly_features.fit_transform(x_train)
+            print(x_poly_train.size)
+            print(x_poly_train)
+            x_poly_test = poly_features.transform(x_test)
 
             model = LinearRegression()
             model.fit(x_poly_train, y_train)
 
             mse_test = mean_squared_error(y_test, model.predict(x_poly_test))
             r2_test = r2_score(y_test, model.predict(x_poly_test))
-            print(f"""Grado: {grado}, MSE: {mse_test}, R2: {r2_test}""")
+            print(f"""Grado: {grado}, MSE: {mse_test}, R2: {r2_test, model.score(x_poly_test, y_test)}""")
+            print(f"coef: {model.coef_}, intercept: {model.intercept_}")
             num_params = x_poly_train.shape[1]
 
             aic = len(y_test) * np.log(mse_test) + 2 * num_params
@@ -190,9 +238,6 @@ class MyTestCase(unittest.TestCase):
         grado_optimo = grados[np.argmin(aic_values)]
         print(aic_values)
         print(f'Grado óptimo: {grado_optimo}')
-
-
-
 
 
 
