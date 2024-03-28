@@ -1,76 +1,37 @@
-import numpy as np
+import os
 import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.dates import date2num
-from matplotlib.dates import DateFormatter, MonthLocator
-from scipy.optimize import curve_fit
-
-
-data = pd.read_csv(r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\evapotranspiration\et_parcela_5.csv")
-data['num_index'] = date2num(data['Fecha'])
-data['Fecha'] = pd.to_datetime(data['Fecha'])
-
-transformada = np.fft.fft(data['Evapotranspiration'])
-
-total_dias = len(data)
-frecuencias = np.fft.fftfreq(total_dias)
-amplitudes = np.abs(transformada)
-frecuencias_dominantes = frecuencias[np.argsort(amplitudes)[::-1]]
-
-umbral_frecuencia = 0.1  # Umbral de frecuencia para filtrar
-transformada_filtrada = transformada.copy()
-transformada_filtrada[np.abs(frecuencias) > umbral_frecuencia] = 0
-
-senal_reconstruida = np.fft.ifft(transformada_filtrada)
-
-
-def sinusoidal(t, A, omega, phi, offset):
-    return A * np.sin(omega * t + phi) + offset
-
-
-# Parámetros iniciales para el ajuste
-amplitud_inicial = max(data['Evapotranspiration']) - min(data['Evapotranspiration'])
-omega_inicial = 2 * np.pi / 365  # Frecuencia anual (365 días)
-phi_inicial = 0
-offset_inicial = np.mean(data['Evapotranspiration'])
-parametros_iniciales = [amplitud_inicial, omega_inicial, phi_inicial, offset_inicial]
-
-# Realizar ajuste de curva
-parametros_optimizados, covarianzas = curve_fit(sinusoidal, data['num_index'], senal_reconstruida.real, p0=parametros_iniciales)
-
-# Obtener parámetros óptimos
-amplitud_optima, omega_optima, phi_optima, offset_optimo = parametros_optimizados
-
-# Crear función ajustada
-temperatura_ajustada = sinusoidal(data['num_index'], amplitud_optima, omega_optima, phi_optima, offset_optimo)
-
+import json
 from sklearn.metrics import mean_squared_error, r2_score
 
-# Calcular el error cuadrático medio (MSE)
-mse = mean_squared_error(data['Evapotranspiration'], temperatura_ajustada)
+from stats_utils.fourier import fft, adjust_fft_curve, sinusoidal
 
-# Calcular el coeficiente de determinación (R-cuadrado)
-r2 = r2_score(data['Evapotranspiration'], temperatura_ajustada)
+data_dir = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\evapotranspiration"
+dest_dir = r"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\fourier\evapotranspiration"
+params_dir = r"C:\Users\Isai\Documents\Tesis\code\data_analysis\fourier\parametros\evapotranspiration"
 
-print("Error cuadrático medio (MSE):", mse)
-print("Coeficiente de determinación (R^2):", r2)
-print(data)
+for i in os.listdir(data_dir):
+    print(i)
+    data = pd.read_csv(os.path.join(data_dir, i))
+    data['Fecha'] = pd.to_datetime(data['Fecha'])
+    data['Dia'] = (data['Fecha'] - data['Fecha'].min()).dt.days + 1
+    fft_results = fft(data, 0.1, ['Fecha', 'Evapotranspiration'])
+    data['Reconstruida'] = fft_results['senal_reconstruida'].real
+    parametros_optimizados, covarianzas = adjust_fft_curve(data, ['Fecha', 'Evapotranspiration', 'Dia'], fft_results)
+    model_data = {
+        'A': parametros_optimizados[0],
+        'omega': parametros_optimizados[1],
+        'phi': parametros_optimizados[2],
+        'offset': parametros_optimizados[3]
+    }
 
+    ajustados = sinusoidal(data['Dia'], *parametros_optimizados)
+    data['Ajustados'] = ajustados
+    mse = mean_squared_error(data['Evapotranspiration'], ajustados)
+    r2 = r2_score(data['Evapotranspiration'], ajustados)
 
-fig, ax = plt.subplots(figsize=(10, 6))
-ax.xaxis.set_major_locator(MonthLocator(interval=4))
-ax.xaxis.set_major_formatter(DateFormatter("%Y-%m"))
-plt.plot(data['Fecha'], data['Evapotranspiration'], label='Señal Original', color='firebrick', linewidth=1)
-plt.plot(data['Fecha'], senal_reconstruida.real, label='Señal Reconstruida', linestyle='-.', color='gold',
-         linewidth=1)
-plt.plot(data['Fecha'], temperatura_ajustada, label='Señal Ajustada', linestyle='-.', color='navy',
-         linewidth=1)
-box_text = f'$R^2$: {r2:.3f}\nMSE: {mse:.3f}'
-ax.text(0.92, 0.8, box_text, transform=ax.transAxes,
-        bbox=dict(facecolor='white', edgecolor='black', boxstyle='round,pad=0.5'), fontsize=8)
-plt.xlabel('Fecha')
-plt.ylabel('Evapotranspiración de referencia (mm/día)')
-plt.title('Análisis de Fourier de Evapotranspiración de referencia')
-plt.legend()
-plt.grid(True)
-plt.show()
+    model_data['mse'] = mse
+    model_data['r2'] = r2
+
+    data.to_csv(os.path.join(dest_dir, i), index=False)
+    with open(os.path.join(params_dir, i.split('.')[0] + '.json'), 'w') as f:
+        json.dump(model_data, f)
