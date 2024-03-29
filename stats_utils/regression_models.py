@@ -1,14 +1,39 @@
-from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import PolynomialFeatures
+
+import statsmodels.api as sm
+
+import numpy as np
+
+from pandas import DataFrame
 
 
-def simple_weight_regression(x_data, y_data, weight_data):
-    """
-    Realiza una regresión lineal ponderada con los datos de entrada.
-    :param x_data: Datos de la variable independiente
-    :param y_data: Datos de la variable dependiente
-    :param weight_data: Datos de los pesos
-    :return: Modelo de regresión lineal
-    """
-    model = LinearRegression()
-    model.fit(x_data, y_data, sample_weight=weight_data)
-    return model
+def linear_reg_model(data: DataFrame, columns: list, max_degree: int = 10):
+
+    x_data = data[columns[0]].values.reshape(-1, 1)
+    y_data = data[columns[1]].values
+
+    x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=0.2, random_state=42)
+
+    degrees = np.arange(1, max_degree)
+
+    model_metadata = DataFrame(columns=['degree', 'params', 'aic', 'rsquared', 'mse'])
+    models = {}
+
+    for degree in degrees:
+        poly_features = PolynomialFeatures(degree=degree, include_bias=False)
+        x_poly_train = poly_features.fit_transform(x_train)
+        x_poly_test = poly_features.transform(x_test)
+        x_poly = poly_features.transform(x_data)
+
+        model = sm.OLS(y_train, sm.add_constant(x_poly_train)).fit()
+        models[degree] = (model, poly_features)
+        y_pred = model.predict(sm.add_constant(x_poly))
+
+        model_metadata = model_metadata._append({'degree': degree,
+                        'params': model.params,
+                        'aic': model.aic,
+                        'rsquared': model.rsquared,
+                        'mse': model.mse_model}, ignore_index=True)
+
+    return model_metadata, models
