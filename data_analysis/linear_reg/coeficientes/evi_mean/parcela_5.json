@@ -1,0 +1,128 @@
+[
+    {
+        "degree": 1,
+        "params": [
+            null,
+            null
+        ],
+        "aic": null,
+        "rsquared": null,
+        "mse": null
+    },
+    {
+        "degree": 2,
+        "params": [
+            null,
+            null,
+            null
+        ],
+        "aic": null,
+        "rsquared": null,
+        "mse": null
+    },
+    {
+        "degree": 3,
+        "params": [
+            null,
+            null,
+            null,
+            null
+        ],
+        "aic": null,
+        "rsquared": null,
+        "mse": null
+    },
+    {
+        "degree": 4,
+        "params": [
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "aic": null,
+        "rsquared": null,
+        "mse": null
+    },
+    {
+        "degree": 5,
+        "params": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "aic": null,
+        "rsquared": null,
+        "mse": null
+    },
+    {
+        "degree": 6,
+        "params": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "aic": null,
+        "rsquared": null,
+        "mse": null
+    },
+    {
+        "degree": 7,
+        "params": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "aic": null,
+        "rsquared": null,
+        "mse": null
+    },
+    {
+        "degree": 8,
+        "params": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "aic": null,
+        "rsquared": null,
+        "mse": null
+    },
+    {
+        "degree": 9,
+        "params": [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null
+        ],
+        "aic": null,
+        "rsquared": null,
+        "mse": null
+    }
+]
