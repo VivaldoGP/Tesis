@@ -78,3 +78,22 @@ def ndmi(img: DatasetReader, swir_band: int = 11, nir_band: int = 8):
     ndmi_band = (nir_band.astype(float) - swir_band.astype(float)) / (nir_band.astype(float) + swir_band.astype(float))
 
     return ndmi_band
+
+
+def ndwi(img: DatasetReader, nir_band: int = 8, green_band: int = 3):
+    """
+    Calcula el ndwi
+    Args:
+        nir_band:
+        green_band:
+        img: un imagen de rasterio
+
+    Returns:
+        un ndarray con los valores del ndwi para pixel
+    """
+    nir_band = img.read(nir_band)
+    green_band = img.read(green_band)
+
+    ndwi_band = (green_band.astype(float) - nir_band.astype(float)) / (green_band.astype(float) + nir_band.astype(float))
+
+    return ndwi_band
