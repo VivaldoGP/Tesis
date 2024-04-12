@@ -1,9 +1,10 @@
-El archivo [find_degree.py]() calcula el polinomio que mejor describa el comportamiento de los
-datos de entrada, iterando desde el grado 1 que es un modelo lineal 
-hasta el grado 10, que es un modelo polinomial de grado 10.
-Para esto se dividen los datos en dos conjuntos, uno de entrenamiento y otro de prueba, las 
-variables son los días transcurridos y el valor del ndvi promedio para
-la parcela en esa fecha/día.
-Se utiliza el metodo de OLS de statsmodels para calcular el polinomio que mejor se ajuste a los datos.
-Se contrastan los datos con el criterio de Akaike y se elige el polinomio que mejor se ajuste a los datos.
-Se grafican los datos y el polinomio que mejor se ajusta a los datos.
+## Análisis de los datos
+
+Se tienen como referencia 2 tipos de análisis dependiendo de los datos, para los datos climatológicos se aplica
+el análisis de Fourier con la Transformada Rápida de Fourier (FFT). Teniendo como resultado los elementos para generar
+una función sinusoidal que se ajuste a los datos.
+
+Para los datos de las series de tiempo de las parcelas se aplica una regresión polinomial de grado n, donde n es el
+grado del polinomio que mejor se ajuste a los datos, comenzando desde una regresión lineal hasta una regresión
+polinomial de grado 6. Los valores de los coeficientes de la regresión se guardan en un archivo .json para su posterior
+análisis.
