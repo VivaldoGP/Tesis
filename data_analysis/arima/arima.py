@@ -5,6 +5,7 @@ from stats_utils.arima import arima_model
 from statsmodels.tools.eval_measures import rmse
 from sklearn.metrics import r2_score
 
+
 parcela = int(input('Ingrese el id de la parcela: '))
 variable = str(input('Ingrese la variable a analizar: '))
 export_metadata = str(input('¿Desea exportar los metadatos? (y/n): '))
@@ -13,7 +14,7 @@ export_predictions = str(input('¿Desea exportar las predicciones? (y/n): '))
 folder = 'evapotranspiration'
 
 
-data_dir = rf"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\{folder}\parcela_{parcela}.csv"
+data_dir = rf"C:\Users\Isai\Documents\Tesis\code\datos\agroclimate\{folder}\parcela_{parcela}.csv"
 des_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\arima\{folder}"
 model_metadata = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\arima\model_metadata\{folder}"
 
@@ -42,11 +43,11 @@ metrics = {
 
 if export_metadata == 'y':
     with open(os.path.join(model_metadata, f'parcela_{parcela_id}.json'), 'w') as f:
-        f.write(json.dumps(metrics))
+        f.write(json.dumps(metrics, indent=4))
 elif export_metadata == 'n':
     pass
 
-df['arima_predicts'] = model_fit.fittedvalues
+df[f'{variable}_arima'] = model_fit.fittedvalues
 
 if export_predictions == 'y':
     df.to_csv(os.path.join(des_dir, f'parcela_{parcela_id}.csv'))
