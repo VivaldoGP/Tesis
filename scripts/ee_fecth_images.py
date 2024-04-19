@@ -74,8 +74,8 @@ def export_images(folder: str, img: Image, aoi: Geometry, to_crs: str, filename:
     return print(f"{filename} exportada correctamente.")
 
 
-start_date = Date('2022-02-01')
-end_date = Date('2023-05-01')
+start_date = Date('2020-01-01')
+end_date = Date('2023-12-31')
 
 ic = ImageCollection("COPERNICUS/S2_SR_HARMONIZED").filterDate(start=start_date, opt_end=end_date).filter(
     Filter.eq('MGRS_TILE', '14QML')
@@ -83,7 +83,7 @@ ic = ImageCollection("COPERNICUS/S2_SR_HARMONIZED").filterDate(start=start_date,
 
 print(ic.size().getInfo())
 
-with open(r"C:\Users\DELL\PycharmProjects\Tesis\Parcelas\Parcelas_final.geojson", encoding='utf-8') as geo:
+with open(r"C:\Users\Isai\Documents\Tesis\code\Parcelas\poligonos_parcelas.geojson", encoding='utf-8') as geo:
     parcels = json.load(geo)
 
 
@@ -98,21 +98,26 @@ for parcel in parcels['features']:
 
     for image_ in ic.getInfo()['features']:
         image_ = Image(image_['id'])
+        img_props = json.dumps(image_.getInfo(), indent=4)
         intersects = does_intersect(image=image_, feature_geom=parcel_bbox.geometry())
         if intersects:
             cloudy_pixels = cloud_pixels(image=image_, cloud_percent=50, aoi=parcel_bbox.geometry())
             inside += 1
             if '1' not in cloudy_pixels[0]:
                 print(f"Image Id: {image_.id().getInfo()} limpia, {cloudy_pixels[0]}, Parcela: {parcel_feature.getInfo()['properties']['Id']}")
-                export_images(folder='Tesis_7', img=image_, aoi=parcel_bbox.geometry(), to_crs='EPSG:32614', filename=f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}")
+                export_images(folder='Tesis_9', img=image_, aoi=parcel_bbox.geometry(), to_crs='EPSG:32614', filename=f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}")
                 # print(f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}")
+                with open(rf"G:/Mi unidad/Proyecto_tesis/metadata/{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}.json", 'w') as f:
+                    f.write(img_props)
                 cloud_free += 1
             elif '0' in cloudy_pixels[0]:
                 if '1' in cloudy_pixels[0]:
                     if cloudy_pixels[0]['0'] > cloudy_pixels[0]['1']:
                         print(f"Image Id: {image_.id().getInfo()} semi-limpia, {cloudy_pixels[0]}, Parcela: {parcel_feature.getInfo()['properties']['Id']}")
-                        export_images(folder='Tesis_7', img=image_, aoi=parcel_bbox.geometry(), to_crs='EPSG:32614',
+                        export_images(folder='Tesis_9', img=image_, aoi=parcel_bbox.geometry(), to_crs='EPSG:32614',
                                       filename=f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}")
+                        with open(rf"G:/Mi unidad/Proyecto_tesis/metadata/{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}.json", 'w') as f:
+                            f.write(img_props)
 
                         # print(f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()} exportada")
                         semi_free += 1
