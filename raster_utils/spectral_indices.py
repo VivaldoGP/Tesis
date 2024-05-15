@@ -97,3 +97,62 @@ def ndwi(img: DatasetReader, nir_band: int = 8, green_band: int = 3):
     ndwi_band = (green_band.astype(float) - nir_band.astype(float)) / (green_band.astype(float) + nir_band.astype(float))
 
     return ndwi_band
+
+
+def cire(img: DatasetReader, re3_band: int = 7, re1_band: int = 5):
+    """
+    Calcula el cire
+    Args:
+        re3_band:
+        re1_band:
+        img: un imagen de rasterio
+
+    Returns:
+        un ndarray con los valores del cire para pixel
+    """
+    re3_band = img.read(re3_band)
+    re1_band = img.read(re1_band)
+
+    cire_band = (re3_band.astype(float) / re1_band.astype(float)) - 1
+
+    return cire_band
+
+
+def ndre1(img: DatasetReader, re2_band: int = 6, re1_band: int = 5):
+    """
+    Calcula el ndre1
+    Args:
+        re2_band:
+        re1_band:
+        img: un imagen de rasterio
+
+    Returns:
+        un ndarray con los valores del ndre1 para pixel
+    """
+    re2_band = img.read(re2_band)
+    re1_band = img.read(re1_band)
+
+    ndre1_band = (re2_band.astype(float) - re1_band.astype(float)) / (re2_band.astype(float) + re1_band.astype(float))
+
+    return ndre1_band
+
+
+def grndvi(img: DatasetReader, nir_band: int = 8, green_band: int = 3, red_band: int = 4):
+    """
+    Calcula el grndvi
+    Args:
+        nir_band:
+        green_band:
+        red_band:
+        img: un imagen de rasterio
+
+    Returns:
+        un ndarray con los valores del grndvi para pixel
+    """
+    nir_band = img.read(nir_band)
+    green_band = img.read(green_band)
+    red_band = img.read(red_band)
+
+    grndvi_band = nir_band.astype(float) - ((green_band.astype(float) + red_band.astype(float))/nir_band.astype(float)) + green_band.astype(float) + red_band.astype(float)
+
+    return grndvi_band
