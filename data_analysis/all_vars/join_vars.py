@@ -8,6 +8,15 @@ zafra = int(input("Zafra: "))
 ndvi_coefs_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\linear_reg\coeficientes\zafra{zafra}\ndvi_mean"
 ndvi_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\model_predicts\zafra{zafra}\ndvi_mean"
 
+gndvi_coefs_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\linear_reg\coeficientes\zafra{zafra}\gndvi_mean"
+gndvi_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\model_predicts\zafra{zafra}\gndvi_mean"
+
+cire_coefs_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\linear_reg\coeficientes\zafra{zafra}\cire_mean"
+cire_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\model_predicts\zafra{zafra}\cire_mean"
+
+ndre1_coefs_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\linear_reg\coeficientes\zafra{zafra}\ndre1_mean"
+ndre1_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\model_predicts\zafra{zafra}\ndre1_mean"
+
 ndmi_coefs_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\linear_reg\coeficientes\zafra{zafra}\ndmi_mean"
 ndmi_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\model_predicts\zafra{zafra}\ndmi_mean"
 
@@ -22,6 +31,27 @@ for parcela in os.listdir(ndvi_coefs_dir):
         params = coefs[1]['params']
         c_ndvi, b_ndvi, a_ndvi = params[0], params[1], params[2]
         print(f"Coeficientes: {a_ndvi}, {b_ndvi}, {c_ndvi}")
+
+    with open(os.path.join(gndvi_coefs_dir, parcela), 'r') as file:
+        coefs = json.load(file)
+        print(f"Parcela: {parcela_id}")
+        params = coefs[1]['params']
+        c_gndvi, b_gndvi, a_gndvi = params[0], params[1], params[2]
+        print(f"Coeficientes: {a_gndvi}, {b_gndvi}, {c_gndvi}")
+
+    with open(os.path.join(cire_coefs_dir, parcela), 'r') as file:
+        coefs = json.load(file)
+        print(f"Parcela: {parcela_id}")
+        params = coefs[1]['params']
+        c_cire, b_cire, a_cire = params[0], params[1], params[2]
+        print(f"Coeficientes: {a_cire}, {b_cire}, {c_cire}")
+
+    with open(os.path.join(ndre1_coefs_dir, parcela), 'r') as file:
+        coefs = json.load(file)
+        print(f"Parcela: {parcela_id}")
+        params = coefs[1]['params']
+        c_ndre1, b_ndre1, a_ndre1 = params[0], params[1], params[2]
+        print(f"Coeficientes: {a_ndre1}, {b_ndre1}, {c_ndre1}")
 
     with open(os.path.join(ndmi_coefs_dir, parcela), 'r') as file:
         coefs = json.load(file)
@@ -45,8 +75,11 @@ for parcela in os.listdir(ndvi_coefs_dir):
             print(f"Start: {start_date}, End: {end_date} para la parcela {parcela_id}")
             dias = [start_date + pd.Timedelta(days=i) for i in range((end_date - start_date).days + 1)]
             dias_serie = pd.Series(dias)
-            df = pd.DataFrame({'Fecha': dias_serie, 'dias': np.linspace(1, len(dias), len(dias))})
+            df = pd.DataFrame({'Parcela': parcela_id, 'Fecha': dias_serie, 'dias': np.linspace(1, len(dias), len(dias))})
             df['ndvi'] = a_ndvi * df['dias'] ** 2 + b_ndvi * df['dias'] + c_ndvi
+            df['gndvi'] = a_gndvi * df['dias'] ** 2 + b_gndvi * df['dias'] + c_gndvi
+            df['cire'] = a_cire * df['dias'] ** 2 + b_cire * df['dias'] + c_cire
+            df['ndre1'] = a_ndre1 * df['dias'] ** 2 + b_ndre1 * df['dias'] + c_ndre1
             print(f"parcela: {parcela_id}, coefs: {a_ndvi}, {b_ndvi}, {c_ndvi}")
             df['ndmi'] = a_ndmi * df['dias'] ** 2 + b_ndmi * df['dias'] + c_ndmi
             print(f"parcela: {parcela_id}, coefs: {a_ndmi}, {b_ndmi}, {c_ndmi}")
@@ -70,13 +103,13 @@ for parcela in os.listdir(ndvi_coefs_dir):
                     solar = solar[(solar['Fecha'] >= start_date) & (solar['Fecha'] <= end_date)]
                     df = pd.merge(df, solar, on='Fecha', how='outer')
 
-            for precip_file in os.listdir(r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\precipitation"):
+            for precip_file in os.listdir(r"C:\Users\Isai\Documents\Tesis\code\datos\agroclimate\precipitation"):
                 if int(precip_file.split('_')[1].split('.')[0]) == parcela_id:
                     precip = pd.read_csv(
-                        os.path.join(r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\precipitation", precip_file),
+                        os.path.join(r"C:\Users\Isai\Documents\Tesis\code\datos\agroclimate\precipitation", precip_file),
                         parse_dates=['Fecha'])
                     precip = precip[(precip['Fecha'] >= start_date) & (precip['Fecha'] <= end_date)]
-                    precip['acum'] = precip['Precipitation'].cumsum()
+                    precip['precip_acum'] = precip['precip'].cumsum()
                     df = pd.merge(df, precip, on='Fecha', how='outer')
 
             for evapo_file in os.listdir(
@@ -86,8 +119,8 @@ for parcela in os.listdir(ndvi_coefs_dir):
                         r"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\fourier\evapotranspiration",
                         evapo_file), parse_dates=['Fecha'])
                     evapo = evapo[(evapo['Fecha'] >= start_date) & (evapo['Fecha'] <= end_date)]
-                    evapo['acum_ref'] = evapo['Evapotranspiration'].cumsum()
-                    evapo['acum_ajustados'] = evapo['Ajustados'].cumsum()
+                    evapo['et_acum'] = evapo['et'].cumsum()
+                    evapo['et_acum_ajustados'] = evapo['ajustados_et'].cumsum()
 
                     df = pd.merge(df, evapo, on='Fecha', how='outer')
 
@@ -99,7 +132,7 @@ for parcela in os.listdir(ndvi_coefs_dir):
                         rh_file), parse_dates=['Fecha'])
                     rh = rh[(rh['Fecha'] >= start_date) & (rh['Fecha'] <= end_date)]
                     df = pd.merge(df, rh, on='Fecha', how='outer')
-                    # print(df)
+
                     df.to_csv(
                         rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\all_vars\zafra{zafra}\parcela_{parcela_id}.csv",
                         index=False)
