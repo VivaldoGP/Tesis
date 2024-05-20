@@ -54,7 +54,7 @@ Se realiza el mismo procedimiento, pero con los otros datos, las variables son:
 - Relative_Humidity_2m_12h
 - Precipitation_Flux
 
-El script que realiza esta tarea es [process_climate_data.py](https://github.com/VivaldoGP/Tesis/blob/main/scripts/process_prep_data.py),
+El script que realiza esta tarea es [process_prep_data.py](https://github.com/VivaldoGP/Tesis/blob/main/scripts/process_prep_data.py),
 la diferencia con el anterior es que los datos de entrada se encuentran en formato NetCDF, por lo que se utiliza la 
 librería xarray para realizar la extracción de los datos y se exportan a un archivo csv. Por esa razón se tienen dos 
 scripts distintos que tienen la misma finalidad.
@@ -94,7 +94,7 @@ El script encargado de realizar esta tarea es [kc_et.py](https://github.com/Viva
 
 Se tienen las diferentes variables para cada una parcela respecto a cada fecha, pero es necesario conocer los días
 transcurridos a partir de la primera fecha, para esto se desarrolló el script [counting_days.py](https://github.com/VivaldoGP/Tesis/blob/main/scripts/counting_days.py), el cual realiza esta
-tarea y exporta un nuevo archivo csv a la carpeta [ready_to_analyze](https://github.com/VivaldoGP/Tesis/tree/main/datos/parcelas/ready_to_analyze).
+tarea y exporta un nuevo archivo csv a la carpeta [ready_to_analyze](https://github.com/VivaldoGP/Tesis/tree/main/datos/parcelas/ready_to_analyze), la cual está dividida por zafras.
 
 ## Delimitación de los datos meteorológicos
 

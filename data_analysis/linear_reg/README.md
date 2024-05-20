@@ -8,3 +8,6 @@ Se utiliza el metodo de OLS de statsmodels para calcular el polinomio que mejor 
 Se contrastan los datos con el criterio de Akaike y se elige el polinomio que mejor se ajuste a los datos.
 Se grafican los datos y el polinomio que mejor se ajusta a los datos.
 Se guardan los valores predichos en un archivo .csv y las graficas en un archivo .png. para cada parcela.
+
+Se mejoró con el archivo [find_degree_op.py](), el cual es una versión optimizada
+y solo necesita la zafra y si se desea exportar los metadatos.
