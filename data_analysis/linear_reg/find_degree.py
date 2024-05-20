@@ -79,6 +79,7 @@ for degree in range(1, 7):
     df[f'{variable}_pred_{degree}'] = y_pred
 
     ax[degree - 1].scatter(df['dia'], df[variable], color='lightcoral', label='Datos reales', marker='D', s=3)
+    ax[degree - 1].plot(df['dia'], df[variable], color='lightcoral', linestyle='-', linewidth=0.7)
     ax[degree - 1].plot(x, y_pred, label=f'Modelo (grado {degree})', linestyle='--', linewidth=0.7, color='royalblue')
     ax[degree - 1].set_title(f'Grado {degree}')
     ax[degree - 1].set_xlabel('Día')
