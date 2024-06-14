@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 from pandas import DataFrame
-from plot_utils.charts import simple_line_plot, two_line_plot, precipitation_plot, vi_vs_climate_plot, poly_degree_plot
+from plot_utils.charts import simple_line_plot, two_line_plot, precipitation_plot, vi_vs_climate_plot, poly_degree_plot, scatter_plot
 from some_utils.cleanning_data import harvest_dates
 import numpy as np
 import matplotlib.pyplot as plt
@@ -662,9 +662,12 @@ class MyTestCase(unittest.TestCase):
 
         archivos_csv = [archivo for archivo in os.listdir(root) if archivo.endswith('.csv')]
         cmap = get_cmap('Paired')  # Puedes cambiar 'viridis' por cualquier otra paleta de colores
+        cmap2 = get_cmap('tab20')
 
         # Normalizar los índices de los archivos para asignar colores
         norm = Normalize(vmin=0, vmax=len(archivos_csv) - 1)
+
+        fig, ax = plt.subplots(figsize=(12, 6))
 
         # Graficar cada archivo CSV
         for i, archivo in enumerate(archivos_csv):
@@ -678,10 +681,15 @@ class MyTestCase(unittest.TestCase):
 
             # Obtener el color correspondiente de la rampa
             color = cmap(norm(i))
+            color2 = cmap2(norm(i))
 
             # Graficar los datos con el color correspondiente
-            plt.plot(datos['Fecha'], datos['ndvi'], color=color, label=archivo.split('.')[0].split('_')[1])
+            ax.plot(datos['Fecha'], datos['temp'], color=color, label=archivo.split('.')[0].split('_')[1],
+                    linestyle='-', linewidth=0.7)
+            ax.legend()
 
+            ax2 = ax.twinx()
+            ax2.plot(datos['Fecha'], datos['ndvi'], color=color2, linestyle='-.', linewidth=0.7)
         # Agregar leyenda
         plt.legend()
 
@@ -696,6 +704,20 @@ class MyTestCase(unittest.TestCase):
         gpf['promedios'] = gpf['Productor'].map(promedios)
         gpf = gpf.drop_duplicates(subset='Productor')
         print(gpf)
+        pass
+
+    def test_scatter(self):
+        root = r"C:\Users\Isai\Documents\Tesis\code\data_analysis\all_vars\zafra2022"
+        frames = [pd.read_csv(os.path.join(root, archivo)) for archivo in os.listdir(root) if archivo.endswith('.csv')]
+        df = pd.concat(frames, axis=0, ignore_index=True)
+        df['kc'] = 1.15 * df['ndvi'] + 0.17
+        df['Etc'] = df['kc'] * df['Evapotranspiration']
+
+        print(df)
+        # scatter_plot(df, 'RH12', 'ndvi', 'Parcela 1', 'NDVI', 'Temperatura', export=False)
+        plt.hist(df['msi'], bins=20)
+        plt.show()
+
         pass
 
 if __name__ == '__main__':

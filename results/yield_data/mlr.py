@@ -13,7 +13,7 @@ df = pd.read_csv(ds)
 var1 = str(input('Variable 1: '))
 var2 = str(input('Variable 2: '))
 
-model_metadata = pd.DataFrame(columns=['vars','aic', 'rsquared', 'mse', 'rmse'])
+model_metadata = pd.DataFrame(columns=['vars', 'aic', 'rsquared', 'mse', 'rmse'])
 
 x = df[[var1, var2]]
 y = df['rendimiento']

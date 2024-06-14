@@ -88,7 +88,7 @@ for j in os.listdir(data_folder):
             poly_degree_aic(model_metadata, 'degree', ['aic', 'rsquared'], f'Parcela {parcela_id}',
                             'Grado del polinomio', ['AIC', '$R^2$'],
                             export=True,
-                            export_path=os.path.join(variable_folder_aic, rf"parcela_{parcela_id}.png"))
+                            export_path=os.path.join(variable_folder_aic, rf"parcela_{parcela_id}.pdf"))
 
             fig, ax = plt.subplots(3, 2, figsize=(18, 12))
             fig.suptitle(f'Parcela {parcela_id}', fontsize=16)
@@ -119,4 +119,4 @@ for j in os.listdir(data_folder):
             ds.to_csv(os.path.join(variable_folder_predicts, f'parcela_{parcela_id}.csv'), index=False)
             plt.subplots_adjust(hspace=0.5, wspace=0.5)
             plt.tight_layout()
-            plt.savefig(os.path.join(variable_folder_polys, f'parcela_{parcela_id}.png'), dpi=100)
+            plt.savefig(os.path.join(variable_folder_polys, f'parcela_{parcela_id}.pdf'), dpi=100)

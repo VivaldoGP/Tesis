@@ -34,6 +34,7 @@ for parcela in os.listdir(raw_data_path):
             end_date = harvest['end']
             if parcel_id == int(parcela_id):
                 data = harvest_dates(data, start_date, end_date)
-                data = treshold_data(data, 0.2, 'ndvi_mean')
+                data = treshold_data(data, 0, 'ndvi_mean')
+                # data['dia'] = (data['Fecha'] - data['Fecha'].min()).dt.days
                 print(f'id: {parcela_id}', data)
                 data.to_csv(os.path.join(prepared_data_path, f'parcela_{parcela_id}.csv'), index=False)

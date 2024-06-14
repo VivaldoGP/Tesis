@@ -105,11 +105,12 @@ for parcel in parcels['features']:
             inside += 1
             if '1' not in cloudy_pixels[0]:
                 print(f"Image Id: {image_.id().getInfo()} limpia, {cloudy_pixels[0]}, Parcela: {parcel_feature.getInfo()['properties']['Id']}")
-                export_images(folder='Tesis_9', img=image_, aoi=parcel_bbox.geometry(), to_crs='EPSG:32614', filename=f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}")
+                export_images(folder='Tesis_cloudless', img=image_, aoi=parcel_bbox.geometry(), to_crs='EPSG:32614', filename=f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}")
                 # print(f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}")
-                with open(rf"G:/Mi unidad/Proyecto_tesis/metadata/{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}.json", 'w') as f:
+                with open(rf"G:/Mi unidad/Proyecto_tesis/metadata_cloudless/{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}.json", 'w') as f:
                     f.write(img_props)
                 cloud_free += 1
+            '''
             elif '0' in cloudy_pixels[0]:
                 if '1' in cloudy_pixels[0]:
                     if cloudy_pixels[0]['0'] > cloudy_pixels[0]['1']:
@@ -121,6 +122,7 @@ for parcel in parcels['features']:
 
                         # print(f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()} exportada")
                         semi_free += 1
+            '''
         else:
             out += 1
 

@@ -1,0 +1,77 @@
+[
+  {
+    "Parcelas_id": 1,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 2,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 3,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 4,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 5,
+    "skip_days_start": 1,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 6,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 7,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 8,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 9,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 10,
+    "skip_days_start": 1,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 11,
+    "skip_days_start": 1,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 13,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 14,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 15,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  },
+  {
+    "Parcelas_id": 16,
+    "skip_days_start": 0,
+    "skip_days_end": 0
+  }
+]

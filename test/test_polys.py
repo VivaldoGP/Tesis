@@ -11,6 +11,10 @@ import matplotlib.pyplot as plt
 import os
 import statsmodels.api as sm
 from statsmodels.tools.eval_measures import rmse, mse
+from statsmodels.tsa.seasonal import seasonal_decompose
+from statsmodels.tsa.arima.model import ARIMA
+from stats_utils.regression_models import linear_reg_model
+from statsmodels.tsa.holtwinters import ExponentialSmoothing
 
 
 root = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\ready_to_analyze"
@@ -240,6 +244,139 @@ class MyTestCase(unittest.TestCase):
         print(f'Grado óptimo: {grado_optimo}')
 
 
+    def test_armonico(self):
+        temp = pd.read_csv(r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\temperature\parcela_5.csv")
+        temp = temp.set_index('Fecha')
+
+        # Descomposición de la serie temporal
+        result = seasonal_decompose(temp['Temperature'], model='additive', period=365)
+        print(result, type(result))
+        print(result.trend, type(result.trend))
+        print(result.seasonal, type(result.seasonal))
+
+        model = ARIMA(result.resid.dropna(), order=(1, 1, 1))
+        model_fit = model.fit()
+        forecast_resid = model_fit.forecast(steps=365)
+        print(forecast_resid, type(forecast_resid))
+
+        forecast = result.trend + result.seasonal + pd.Series(forecast_resid, index=result.resid.dropna().index)
+
+        plt.figure(figsize=(12, 8))
+        plt.subplot(511)
+        plt.plot(temp['Temperature'], label='Original')
+        plt.legend(loc='upper left')
+        plt.subplot(512)
+        plt.plot(result.trend, label='Tendencia')
+        plt.legend(loc='upper left')
+        plt.subplot(513)
+        plt.plot(result.seasonal, label='Estacionalidad')
+        plt.legend(loc='upper left')
+        plt.subplot(514)
+        plt.plot(result.resid, label='Residuos')
+        plt.legend(loc='upper left')
+        plt.subplot(515)
+        plt.plot(forecast, label='Predicción')
+        plt.legend(loc='upper left')
+        plt.tight_layout()
+        plt.show()
+        pass
+
+
+    def test_poly_climate(self):
+        data_dir = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\evapotranspiration\parcela_1.csv"
+        dest_dir = r"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\model_predicts\evapotranspiration"
+        params_dir = r"C:\Users\Isai\Documents\Tesis\code\data_analysis\fourier\parametros\evapotranspiration"
+
+        df = pd.read_csv(data_dir)
+        df['Fecha'] = pd.to_datetime(df['Fecha'])
+        df['Dia'] = (df['Fecha'] - df['Fecha'].min()).dt.days
+
+        metadata, modelos = linear_reg_model(df, ['Dia', 'Evapotranspiration'])
+        print(metadata)
+
+        x = df['Dia'].values.reshape(-1, 1)
+        y = df['Evapotranspiration'].values
+
+        # Crear subfiguras
+        fig, ax = plt.subplots(3, 3, figsize=(18, 12))
+        fig.suptitle(f'Parcela 1', fontsize=16)
+        ax = ax.flatten()
+
+        # Asegurarse de que haya al menos 9 modelos en 'modelos'
+        for degree in range(1, 10):
+            if degree not in modelos:
+                continue
+
+            model_info = modelos[degree]
+            poly_degree = model_info[1]
+            model = model_info[0]
+
+            x_poly = poly_degree.fit_transform(x)
+            y_pred = model.predict(sm.add_constant(x_poly))
+            df[f'y_pred_{degree}'] = y_pred
+
+            ax[degree - 1].scatter(df['Dia'], df['Evapotranspiration'], color='lightcoral', label='Datos reales', marker='D', s=3)
+            ax[degree - 1].plot(x, y_pred, label=f'Modelo (grado {degree})', linestyle='--', linewidth=0.7,
+                                color='royalblue')
+            ax[degree - 1].set_title(f'Grado {degree}')
+            ax[degree - 1].set_xlabel('Día')
+            ax[degree - 1].set_ylabel('Evapotranspiración')
+            ax[degree - 1].legend(loc='lower right')
+
+            box_text = f'$R^2$:{model.rsquared:.3f}\nAIC: {model.aic:.3f}\nMSE: {model.mse_model:.3f}'
+            ax[degree - 1].text(0.9, 0.9, box_text, transform=ax[degree - 1].transAxes,
+                                bbox=dict(facecolor='white', edgecolor='black', boxstyle='round,pad=0.5'), fontsize=8)
+
+        print(df)
+        # df.to_csv(os.path.join(variable_folder_predicts, rf"parcela_{parcela}.csv"), index=False)
+        plt.subplots_adjust(hspace=1.2, wspace=1)
+
+        plt.tight_layout()
+        # plt.suptitle(f'Parcela {parcela_id}', fontsize=10)
+        #plt.savefig(os.path.join(variable_folder_polys, rf"parcela_{parcela}.jpg"), dpi=600,
+          #          bbox_inches='tight')
+        plt.show()
+
+        pass
+
+
+    def test_arima_climate(self):
+        data_dir = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\relative_humidity\parcela_5.csv"
+        data = pd.read_csv(data_dir, index_col='Fecha', parse_dates=True)
+
+        modelo = ARIMA(data['RH12'], order=(1, 1, 0), freq='D')
+        modelo_fit = modelo.fit()
+        pred = modelo_fit.predict(start='2021-01-01', end='2023-12-31', typ='levels', dynamic=False)
+        print(modelo_fit.summary())
+        print(modelo_fit.mse, modelo_fit.mae)
+        print(f"R2: {r2_score(data['RH12'], modelo_fit.fittedvalues)}")
+        print(f"MSE: {mse(data['RH12'], modelo_fit.fittedvalues)}")
+        data['pred'] = modelo_fit.fittedvalues
+        print(data)
+        plt.plot(data['RH12'], label='Datos reales')
+        plt.plot(modelo_fit.fittedvalues, label='Ajuste')
+        #plt.plot(pred, label='Predicción')
+        plt.legend()
+        plt.show()
+
+        pass
+
+    def test_holtwinters(self):
+        data_dir = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\relative_humidity\parcela_5.csv"
+        data = pd.read_csv(data_dir, index_col='Fecha', parse_dates=True)
+
+        model = ExponentialSmoothing(data['RH12'], seasonal='add', seasonal_periods=365)
+        results = model.fit()
+
+        # print(results.summary())
+        print(f"R2: {r2_score(data['RH12'], results.fittedvalues)}")
+        print(f"MSE: {mse(data['RH12'], results.fittedvalues)}")
+
+        plt.plot(data['RH12'], label='Datos reales')
+        plt.plot(results.fittedvalues, label='Ajuste')
+        plt.legend()
+        plt.show()
+        pass
 
 if __name__ == '__main__':
     unittest.main()

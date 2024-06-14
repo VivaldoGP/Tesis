@@ -4,13 +4,549 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b316ec0b-25cc-4998-add2-6d0afdb78e06" name="Changes" comment="file: precleaned data">
-      <change afterPath="$PROJECT_DIR$/fechas_claves/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="b316ec0b-25cc-4998-add2-6d0afdb78e06" name="Changes" comment="feat: more clouds">
+      <change afterPath="$PROJECT_DIR$/.idea/other.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_10.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_11.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_13.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_14.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_15.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_16.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_3.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_4.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_5.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_6.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_7.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_8.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/relative_humidity/parcela_9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/lr_metrics/lr_juntos_max.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data_analysis/lr_metrics/lr_juntos_mean.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fechas_claves/skip_dates_21.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fechas_claves/skip_dates_22.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plot_img_tesis/time_series.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/raster_utils/read_rasters.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/feno_markers/zafra2021_ndvi.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/feno_markers/zafra2022_ndvi.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/results/metrics/metrics.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/some_utils/read_files.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2021/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/evapotranspiration/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/evapotranspiration/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/relative_humidity/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/solar_radiation/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/solar_radiation/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/arima/model_metadata/temperature/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/arima/model_metadata/temperature/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/evapotranspiration/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/evapotranspiration/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/relative_humidity/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/solar_radiation/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/solar_radiation/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/arima/temperature/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/arima/temperature/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/evapotranspiration/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/relative_humidity/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/solar_radiation/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/fourier/temperature/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/evapotranspiration/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/evapotranspiration/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/relative_humidity/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/solar_radiation/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/solar_radiation/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/holtwinters/temperature/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/holtwinters/temperature/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/msi_mean/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndmi_mean/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2021/ndvi_mean/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/msi_mean/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndmi_mean/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/datos/model_predicts/zafra2022/ndvi_mean/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/evapotranspiration/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_10.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_13.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_14.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_15.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/relativity_humidity/parcela_9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/solar_radiation/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/fourier/parametros/temperature/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/holtwinters.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/holtwinters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/evapotranspiration/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/evapotranspiration/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/relative_humidity/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/solar_radiation/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/solar_radiation/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/temperature/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/holtwinters/model_metadata/temperature/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/msi_mean/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndmi_mean/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2021/ndvi_mean/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/msi_mean/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndmi_mean/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_10.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_10.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_11.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_11.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_13.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_13.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_14.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_14.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_15.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_15.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_16.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_16.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_2.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_3.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_4.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_5.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_6.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_6.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_7.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_8.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_8.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_9.json" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/coeficientes/zafra2022/ndvi_mean/parcela_9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/linear_reg/find_degree_op.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/linear_reg/find_degree_op.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/notebooks/00_models_metrics.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/notebooks/00_models_metrics.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/notebooks/01_corr_data.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/notebooks/01_corr_data.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/notebooks/02_RandomForest.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/notebooks/02_RandomForest.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_analysis/notebooks/04_Regression.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/data_analysis/notebooks/04_Regression.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/indices_stats_cleaned/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2021/parcela_9.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_1.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_1.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_10.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_10.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_11.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_11.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_13.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_13.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_14.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_14.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_15.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_15.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_16.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_16.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_2.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_3.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_3.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_4.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_4.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_5.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_5.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_6.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_6.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_7.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_7.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_8.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_8.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_9.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datos/parcelas/ready_to_analyze/zafra2022/parcela_9.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fechas_claves/clouds.json" beforeDir="false" afterPath="$PROJECT_DIR$/fechas_claves/clouds.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/aic_vs_degrees/parcela_9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes_tesis/polys_vs_data/parcela_9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plot_utils/charts.py" beforeDir="false" afterPath="$PROJECT_DIR$/plot_utils/charts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/results/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/metrics/arima_agroclimate_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/results/metrics/arima_agro_metrics/arima_agroclimate_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/metrics/fourier_agroclimate_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/results/metrics/fourier_agro_metrics/fourier_agroclimate_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/metrics/holtwinters_agroclimate_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/results/metrics/holtwinters_agro_metrics/holtwinters_agroclimate_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/metrics/lr_vis_metrics.py" beforeDir="false" afterPath="$PROJECT_DIR$/results/metrics/zafra_vis_metrics/lr_vis_metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/time_series/time_series.py" beforeDir="false" afterPath="$PROJECT_DIR$/results/time_series/time_series.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/time_series/time_series_agroclimate.py" beforeDir="false" afterPath="$PROJECT_DIR$/results/time_series/time_series_agroclimate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/results/yield_data/mlr.py" beforeDir="false" afterPath="$PROJECT_DIR$/results/yield_data/mlr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/climate_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/climate_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/ee_fecth_images.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/ee_fecth_images.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/move_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/move_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/prepare_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/prepare_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/process_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/process_et_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/process_et_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stats_utils/regression_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/stats_utils/regression_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_plotting.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_plotting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_polys.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_polys.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +557,28 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Unit Test" />
+        <option value="Jupyter Notebook" />
         <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;VivaldoGP&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/VivaldoGP/Tesis.git&quot;,
+    &quot;accountId&quot;: &quot;b86b2f8e-bd19-499a-9c9c-8fa8327b3c48&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/data_analysis/all_vars/zafra2022/parcela_1.csv" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,28 +595,108 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;Python tests.Python tests for analysis.MyTestCase.test_cor.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for analysis.MyTestCase.test_replicate_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for analysis.MyTestCase.test_something.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_cleanning.MyTestCase.test_remove_clouds.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_dates.MyTestCase.test_remove_clouds.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_dates.MyTestCase.test_something.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_plotting.MyTestCase.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_Seaborn.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_all.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_climate_data_models.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_climate_multicolumn.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_corr.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_counting_days.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_fft.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_get_max_value.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_holt_plot.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_mean_vis.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_multi_poly.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_plot_polys.executor&quot;: &quot;Run&quot;,
     &quot;Python tests.Python tests for test_plotting.MyTestCase.test_plotting.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_plotting_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_plotting_all.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_polidata.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_poly.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_poly_deg.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_precip.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_promedios.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_rainbow.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_read_geojson.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_rec_poly.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_scatter.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_uno.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_vars_vs_vars.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_vi_climate.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_plotting.MyTestCase.test_vis.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_polys.MyTestCase.test_aic.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_polys.MyTestCase.test_akaike.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_polys.MyTestCase.test_akaike2.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_polys.MyTestCase.test_arima_climate.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_polys.MyTestCase.test_armonico.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_polys.MyTestCase.test_holtwinters.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_polys.MyTestCase.test_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_polys.MyTestCase.test_model_degree.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_polys.MyTestCase.test_poly_climate.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in analysis.py.executor&quot;: &quot;Run&quot;,
     &quot;Python.agera5_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.arima.executor&quot;: &quot;Run&quot;,
+    &quot;Python.arima_agroclimate_metrics.executor&quot;: &quot;Run&quot;,
+    &quot;Python.climate_process.executor&quot;: &quot;Run&quot;,
+    &quot;Python.counting_days.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ee_fecth_images.executor&quot;: &quot;Run&quot;,
+    &quot;Python.feno_markers.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fft.executor&quot;: &quot;Run&quot;,
+    &quot;Python.find_degree.executor&quot;: &quot;Run&quot;,
+    &quot;Python.find_degree_op.executor&quot;: &quot;Run&quot;,
+    &quot;Python.fourier_agroclimate_metrics.executor&quot;: &quot;Run&quot;,
+    &quot;Python.holtwinters.executor&quot;: &quot;Run&quot;,
+    &quot;Python.holtwinters_agroclimate_metrics.executor&quot;: &quot;Run&quot;,
+    &quot;Python.join_vars.executor&quot;: &quot;Run&quot;,
     &quot;Python.kc_et.executor&quot;: &quot;Run&quot;,
+    &quot;Python.kc_etc.executor&quot;: &quot;Run&quot;,
+    &quot;Python.lr_vis_metrics.executor&quot;: &quot;Run&quot;,
     &quot;Python.merge_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.mlr.executor&quot;: &quot;Run&quot;,
+    &quot;Python.move_files.executor&quot;: &quot;Run&quot;,
     &quot;Python.prepare_data (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.prepare_data..executor&quot;: &quot;Run&quot;,
+    &quot;Python.prepare_data.executor&quot;: &quot;Run&quot;,
     &quot;Python.process_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python.process_et_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process_et_data.executor&quot;: &quot;Profiler&quot;,
+    &quot;Python.process_prep_data.executor&quot;: &quot;Profiler&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.time_series.executor&quot;: &quot;Run&quot;,
+    &quot;Python.time_series_agroclimate.executor&quot;: &quot;Run&quot;,
+    &quot;Python.yield_metrics.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;proofread&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Isai/Documents/Tesis/code/imagenes_tesis&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python tests.Python tests for test_plotting.MyTestCase.test_plotting">
-    <configuration name="kc_et" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Isai\Documents\Tesis\code\results\metrics\arima_agro_metrics" />
+      <recent name="C:\Users\Isai\Documents\Tesis\code\results\metrics\fourier_agro_metrics" />
+      <recent name="C:\Users\Isai\Documents\Tesis\code\results\metrics\holtwinters_agro_metrics" />
+      <recent name="C:\Users\Isai\Documents\Tesis\code\results\metrics\zafra_vis_metrics" />
+      <recent name="C:\Users\Isai\Documents\Tesis\code\data_analysis\linear_reg" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.holtwinters_agroclimate_metrics">
+    <configuration name="arima_agroclimate_metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -73,11 +705,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/results/metrics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/kc_et.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Isai\Documents\Tesis\code\results\metrics\arima_agro_metrics\arima_agroclimate_metrics.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -86,7 +718,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="merge_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="fourier_agroclimate_metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -95,11 +727,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/results/metrics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/merge_data.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Isai\Documents\Tesis\code\results\metrics\fourier_agro_metrics\fourier_agroclimate_metrics.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -108,7 +740,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="prepare_data (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="holtwinters_agroclimate_metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,11 +749,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/results/metrics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/prepare_data.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Isai\Documents\Tesis\code\results\metrics\holtwinters_agro_metrics\holtwinters_agroclimate_metrics.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -130,7 +762,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="process_et_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="kc_etc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,11 +771,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data_analysis/all_vars" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/process_et_data.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_analysis/all_vars/kc_etc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -152,35 +784,42 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_plotting.MyTestCase.test_plotting" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="lr_vis_metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="code" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/results/metrics" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_plotting.MyTestCase.test_plotting&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <option name="SCRIPT_NAME" value="C:\Users\Isai\Documents\Tesis\code\results\metrics\zafra_vis_metrics\lr_vis_metrics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_plotting.MyTestCase.test_plotting" />
-        <item itemvalue="Python.kc_et" />
-        <item itemvalue="Python.merge_data" />
-        <item itemvalue="Python.prepare_data (1)" />
-        <item itemvalue="Python.process_et_data" />
+        <item itemvalue="Python.holtwinters_agroclimate_metrics" />
+        <item itemvalue="Python.fourier_agroclimate_metrics" />
+        <item itemvalue="Python.arima_agroclimate_metrics" />
+        <item itemvalue="Python.lr_vis_metrics" />
+        <item itemvalue="Python.kc_etc" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-50da183f06c8-d3b881c8e49f-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-233.13135.95" />
+        <option value="bundled-python-sdk-0509580d9d50-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.14494.241" />
       </set>
     </attachedChunks>
   </component>
@@ -192,59 +831,491 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1705729547808</updated>
+      <workItem from="1713054345177" duration="18081000" />
+      <workItem from="1713125681785" duration="17486000" />
+      <workItem from="1713235879815" duration="6086000" />
+      <workItem from="1713249131518" duration="6204000" />
+      <workItem from="1713290237089" duration="3965000" />
+      <workItem from="1713489454676" duration="208000" />
+      <workItem from="1713583322458" duration="729000" />
+      <workItem from="1714074819589" duration="1521000" />
+      <workItem from="1714171262631" duration="5048000" />
+      <workItem from="1714356222169" duration="4867000" />
+      <workItem from="1714695292723" duration="4684000" />
+      <workItem from="1714862352130" duration="8485000" />
+      <workItem from="1714957131148" duration="10611000" />
+      <workItem from="1715055487418" duration="10126000" />
+      <workItem from="1715137753722" duration="10999000" />
+      <workItem from="1715311424386" duration="159000" />
+      <workItem from="1715311658770" duration="13410000" />
+      <workItem from="1715384355129" duration="8570000" />
+      <workItem from="1715481397560" duration="13654000" />
+      <workItem from="1715571464023" duration="4112000" />
+      <workItem from="1715636277182" duration="8220000" />
     </task>
-    <task id="LOCAL-00001" summary="First commit">
+    <task id="LOCAL-00047" summary="feat: add spectral indexes">
       <option name="closed" value="true" />
-      <created>1705737291193</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+      <created>1712775930004</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
-      <updated>1705737291193</updated>
+      <updated>1712775930004</updated>
     </task>
-    <task id="LOCAL-00002" summary="feat: updates">
+    <task id="LOCAL-00048" summary="feat: clouds">
       <option name="closed" value="true" />
-      <created>1705804914012</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+      <created>1712816149951</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
       <option name="project" value="LOCAL" />
-      <updated>1705804914012</updated>
+      <updated>1712816149951</updated>
     </task>
-    <task id="LOCAL-00003" summary="feat: ignore dirs">
+    <task id="LOCAL-00049" summary="feat: clouds">
       <option name="closed" value="true" />
-      <created>1705805056555</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+      <created>1712820376845</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
       <option name="project" value="LOCAL" />
-      <updated>1705805056555</updated>
+      <updated>1712820376845</updated>
     </task>
-    <task id="LOCAL-00004" summary="feat: precleaned data">
+    <task id="LOCAL-00050" summary="feat: adapted to 2 seasons">
       <option name="closed" value="true" />
-      <created>1705816076639</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
+      <created>1712820394548</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
       <option name="project" value="LOCAL" />
-      <updated>1705816076639</updated>
+      <updated>1712820394549</updated>
     </task>
-    <task id="LOCAL-00005" summary="file: precleaned data">
+    <task id="LOCAL-00051" summary="feat: ignore files">
       <option name="closed" value="true" />
-      <created>1705816141520</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
+      <created>1712881918729</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
       <option name="project" value="LOCAL" />
-      <updated>1705816141520</updated>
+      <updated>1712881918729</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00052" summary="files: coefs &amp; csv data">
+      <option name="closed" value="true" />
+      <created>1712882045630</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1712882045630</updated>
+    </task>
+    <task id="LOCAL-00053" summary="feat: all vars joined">
+      <option name="closed" value="true" />
+      <created>1712882069346</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1712882069346</updated>
+    </task>
+    <task id="LOCAL-00054" summary="file: moved to other dir">
+      <option name="closed" value="true" />
+      <created>1712882163552</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1712882163552</updated>
+    </task>
+    <task id="LOCAL-00055" summary="file: all vars">
+      <option name="closed" value="true" />
+      <created>1712882249761</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1712882249761</updated>
+    </task>
+    <task id="LOCAL-00056" summary="file: moved">
+      <option name="closed" value="true" />
+      <created>1712882365936</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1712882365936</updated>
+    </task>
+    <task id="LOCAL-00057" summary="file: moved 2">
+      <option name="closed" value="true" />
+      <created>1712882417087</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1712882417087</updated>
+    </task>
+    <task id="LOCAL-00058" summary="file: readme's">
+      <option name="closed" value="true" />
+      <created>1712882467141</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1712882467141</updated>
+    </task>
+    <task id="LOCAL-00059" summary="file: old data">
+      <option name="closed" value="true" />
+      <created>1712882588169</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1712882588169</updated>
+    </task>
+    <task id="LOCAL-00060" summary="file: old coefs">
+      <option name="closed" value="true" />
+      <created>1712884945025</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1712884945025</updated>
+    </task>
+    <task id="LOCAL-00061" summary="file: new coefs &amp; data">
+      <option name="closed" value="true" />
+      <created>1712885163109</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1712885163109</updated>
+    </task>
+    <task id="LOCAL-00062" summary="feat: fix coefs">
+      <option name="closed" value="true" />
+      <created>1712990105727</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1712990105727</updated>
+    </task>
+    <task id="LOCAL-00063" summary="feat: add multiple reg">
+      <option name="closed" value="true" />
+      <created>1712990129314</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1712990129314</updated>
+    </task>
+    <task id="LOCAL-00064" summary="feat: test analysis">
+      <option name="closed" value="true" />
+      <created>1712990389787</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1712990389787</updated>
+    </task>
+    <task id="LOCAL-00065" summary="feat: improve performance &amp; input vars">
+      <option name="closed" value="true" />
+      <created>1713061784627</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1713061784628</updated>
+    </task>
+    <task id="LOCAL-00066" summary="feat: update paths &amp; dates">
+      <option name="closed" value="true" />
+      <created>1713061814881</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1713061814881</updated>
+    </task>
+    <task id="LOCAL-00067" summary="feat: update paths &amp; var name">
+      <option name="closed" value="true" />
+      <created>1713062234550</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1713062234551</updated>
+    </task>
+    <task id="LOCAL-00068" summary="feat: data correlation">
+      <option name="closed" value="true" />
+      <created>1713071637993</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1713071637993</updated>
+    </task>
+    <task id="LOCAL-00069" summary="feat: model metrics">
+      <option name="closed" value="true" />
+      <created>1713076506604</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1713076506604</updated>
+    </task>
+    <task id="LOCAL-00070" summary="feat: Random Forest">
+      <option name="closed" value="true" />
+      <created>1713131411319</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1713131411320</updated>
+    </task>
+    <task id="LOCAL-00071" summary="feat: add viz">
+      <option name="closed" value="true" />
+      <created>1713131702845</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1713131702845</updated>
+    </task>
+    <task id="LOCAL-00072" summary="feat: kc &amp; etc calcs">
+      <option name="closed" value="true" />
+      <created>1713132395642</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1713132395642</updated>
+    </task>
+    <task id="LOCAL-00073" summary="feat: reg with ndvi">
+      <option name="closed" value="true" />
+      <created>1713153661074</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1713153661074</updated>
+    </task>
+    <task id="LOCAL-00074" summary="feat: rf ndvi &amp; etc">
+      <option name="closed" value="true" />
+      <created>1713153674556</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1713153674556</updated>
+    </task>
+    <task id="LOCAL-00075" summary="feat: plotting tests">
+      <option name="closed" value="true" />
+      <created>1713252655912</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1713252655913</updated>
+    </task>
+    <task id="LOCAL-00076" summary="feat: plotting tests">
+      <option name="closed" value="true" />
+      <created>1713253855145</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1713253855145</updated>
+    </task>
+    <task id="LOCAL-00077" summary="feat: last v">
+      <option name="closed" value="true" />
+      <created>1713489651627</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1713489651628</updated>
+    </task>
+    <task id="LOCAL-00078" summary="file: delete files">
+      <option name="closed" value="true" />
+      <created>1714862601927</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1714862601927</updated>
+    </task>
+    <task id="LOCAL-00079" summary="file: adapted to 10m buffer">
+      <option name="closed" value="true" />
+      <created>1714866033931</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1714866033931</updated>
+    </task>
+    <task id="LOCAL-00080" summary="feat: dimov feno markes">
+      <option name="closed" value="true" />
+      <created>1715761870153</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1715761870153</updated>
+    </task>
+    <task id="LOCAL-00081" summary="feat: find deg optimized">
+      <option name="closed" value="true" />
+      <created>1715761887372</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1715761887372</updated>
+    </task>
+    <task id="LOCAL-00082" summary="feat: fix cire">
+      <option name="closed" value="true" />
+      <created>1715761923980</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1715761923980</updated>
+    </task>
+    <task id="LOCAL-00083" summary="feat: time series plot">
+      <option name="closed" value="true" />
+      <created>1715761941240</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1715761941240</updated>
+    </task>
+    <task id="LOCAL-00084" summary="feat: models metrics">
+      <option name="closed" value="true" />
+      <created>1715761965128</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1715761965128</updated>
+    </task>
+    <task id="LOCAL-00085" summary="feat: calc metrics by model">
+      <option name="closed" value="true" />
+      <created>1716187161406</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187161407</updated>
+    </task>
+    <task id="LOCAL-00086" summary="feat: add descriptions">
+      <option name="closed" value="true" />
+      <created>1716187196874</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187196874</updated>
+    </task>
+    <task id="LOCAL-00087" summary="feat: agroclimate metrics">
+      <option name="closed" value="true" />
+      <created>1716187235504</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187235504</updated>
+    </task>
+    <task id="LOCAL-00088" summary="feat: agroclimate models optimized">
+      <option name="closed" value="true" />
+      <created>1716187273217</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187273217</updated>
+    </task>
+    <task id="LOCAL-00089" summary="feat: add vis">
+      <option name="closed" value="true" />
+      <created>1716187290312</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187290312</updated>
+    </task>
+    <task id="LOCAL-00090" summary="feat: select zafra">
+      <option name="closed" value="true" />
+      <created>1716187314586</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187314586</updated>
+    </task>
+    <task id="LOCAL-00091" summary="feat: mlr 2 vars">
+      <option name="closed" value="true" />
+      <created>1716187329167</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187329167</updated>
+    </task>
+    <task id="LOCAL-00092" summary="feat: starts 1">
+      <option name="closed" value="true" />
+      <created>1716187393354</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187393354</updated>
+    </task>
+    <task id="LOCAL-00093" summary="feat: starts 1">
+      <option name="closed" value="true" />
+      <created>1716187399202</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187399202</updated>
+    </task>
+    <task id="LOCAL-00094" summary="feat: harvest dates">
+      <option name="closed" value="true" />
+      <created>1716187414038</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187414038</updated>
+    </task>
+    <task id="LOCAL-00095" summary="feat: more clouds">
+      <option name="closed" value="true" />
+      <created>1716187424153</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1716187424153</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First commit" />
-    <MESSAGE value="feat: updates" />
-    <MESSAGE value="feat: ignore dirs" />
-    <MESSAGE value="feat: precleaned data" />
-    <MESSAGE value="file: precleaned data" />
-    <option name="LAST_COMMIT_MESSAGE" value="file: precleaned data" />
+    <MESSAGE value="feat: model metrics" />
+    <MESSAGE value="feat: Random Forest" />
+    <MESSAGE value="feat: add viz" />
+    <MESSAGE value="feat: kc &amp; etc calcs" />
+    <MESSAGE value="feat: reg with ndvi" />
+    <MESSAGE value="feat: rf ndvi &amp; etc" />
+    <MESSAGE value="feat: plotting tests" />
+    <MESSAGE value="feat: last v" />
+    <MESSAGE value="file: delete files" />
+    <MESSAGE value="file: adapted to 10m buffer" />
+    <MESSAGE value="feat: dimov feno markes" />
+    <MESSAGE value="feat: find deg optimized" />
+    <MESSAGE value="feat: fix cire" />
+    <MESSAGE value="feat: time series plot" />
+    <MESSAGE value="feat: models metrics" />
+    <MESSAGE value="feat: calc metrics by model" />
+    <MESSAGE value="feat: add descriptions" />
+    <MESSAGE value="feat: agroclimate metrics" />
+    <MESSAGE value="feat: agroclimate models optimized" />
+    <MESSAGE value="feat: add vis" />
+    <MESSAGE value="feat: select zafra" />
+    <MESSAGE value="feat: mlr 2 vars" />
+    <MESSAGE value="feat: starts 1" />
+    <MESSAGE value="feat: harvest dates" />
+    <MESSAGE value="feat: more clouds" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: more clouds" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/test/test_plotting.py</url>
+          <line>546</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/code$prepare_data.coverage" NAME="prepare_data Coverage Results" MODIFIED="1714864999948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/code$.coverage" NAME=" Coverage Results" MODIFIED="1713064215822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/test" />
+    <SUITE FILE_PATH="coverage/code$fft.coverage" NAME="fft Coverage Results" MODIFIED="1713061608315" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis/fourier" />
+    <SUITE FILE_PATH="coverage/code$process_prep_data.coverage" NAME="process_prep_data Coverage Results" MODIFIED="1713058228696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/code$find_degree.coverage" NAME="find_degree Coverage Results" MODIFIED="1715061915376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis/linear_reg" />
+    <SUITE FILE_PATH="coverage/code$process_data.coverage" NAME="process_data Coverage Results" MODIFIED="1714864728884" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/code$kc_etc.coverage" NAME="kc_etc Coverage Results" MODIFIED="1715063825723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis/all_vars" />
+    <SUITE FILE_PATH="coverage/code$join_vars.coverage" NAME="join_vars Coverage Results" MODIFIED="1715063695702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis/all_vars" />
+    <SUITE FILE_PATH="coverage/code$arima.coverage" NAME="arima Coverage Results" MODIFIED="1713062102173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis/arima" />
+    <SUITE FILE_PATH="coverage/code$holtwinters.coverage" NAME="holtwinters Coverage Results" MODIFIED="1713063314769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data_analysis/holtwinters" />
+    <SUITE FILE_PATH="coverage/code$ee_fecth_images.coverage" NAME="ee_fecth_images Coverage Results" MODIFIED="1713583426463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/code$counting_days.coverage" NAME="counting_days Coverage Results" MODIFIED="1714971962072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
   </component>
 </project>

@@ -37,3 +37,15 @@ def linear_reg_model(data: DataFrame, columns: list, max_degree: int = 10):
                         'mse': model.mse_model}, ignore_index=True)
 
     return model_metadata, models
+
+
+def simple_linear_reg(data: DataFrame, columns: list):
+    x_data = data[columns[0]].values.reshape(-1, 1)
+    y_data = data[columns[1]].values
+
+    x_train, x_test, y_train, y_test = train_test_split(x_data, y_data, test_size=0.2, random_state=42)
+
+    model = sm.OLS(y_train, sm.add_constant(x_train)).fit()
+    y_pred = model.predict(sm.add_constant(x_data))
+
+    return model

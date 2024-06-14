@@ -9,9 +9,9 @@ parcela = int(input('Ingrese el id de la parcela: '))
 variable = str(input('Ingrese la variable a analizar: '))
 export_metadata = str(input('¿Desea exportar los metadatos? (y/n): '))
 export_predictions = str(input('¿Desea exportar las predicciones? (y/n): '))
-folder = 'evapotranspiration'
+folder = 'relative_humidity'
 
-data_dir = rf"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\{folder}\parcela_{parcela}.csv"
+data_dir = rf"C:\Users\Isai\Documents\Tesis\code\datos\agroclimate\{folder}\parcela_{parcela}.csv"
 des_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\holtwinters\{folder}"
 model_metadata = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\holtwinters\model_metadata\{folder}"
 

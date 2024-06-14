@@ -4,8 +4,8 @@ import json
 from some_utils.cleanning_data import harvest_dates
 
 
-data_path = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\precipitation"
-destiny_path = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\precipitation_harvest_dates"
+data_path = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\evapotranspiration"
+destiny_path = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\evapo_harvest_dates"
 harvest_path = r"C:\Users\Isai\Documents\Tesis\code\fechas_claves\harvest.json"
 
 
@@ -22,5 +22,6 @@ for parcela in os.listdir(data_path):
             end_date = harvest['end']
             if int(parcela_id) == harvest['id']:
                 data = harvest_dates(data, start_date, end_date)
+                data['Dia'] = (data['Fecha'] - data['Fecha'].min()).dt.days
                 print(parcela_id, data)
                 data.to_csv(os.path.join(destiny_path, f'parcela_{parcela_id}.csv'), index=False)

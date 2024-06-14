@@ -17,8 +17,8 @@ for i in modelados_files:
     if var1 in i[0].columns and var2 in i[0].columns:
         if misma_escala == 's':
             fig, ax = plt.subplots(figsize=(10, 5))
-            ax.plot(pd.to_datetime(i[0]['Fecha']), i[0][var1], label=var1)
-            ax.plot(pd.to_datetime(i[0]['Fecha']), i[0][var2], label=var2)
+            ax.plot(pd.to_datetime(i[0]['Fecha']), i[0][var1], label=var1, color=(150/255, 0, 24/255))
+            ax.plot(pd.to_datetime(i[0]['Fecha']), i[0][var2], label=var2, color='g')
             ax.set_title(f'Parcela {i[1]}')
             ax.set_ylabel(f'{var1}')
             ax.set_xlabel('Fecha')
@@ -31,17 +31,20 @@ for i in modelados_files:
             # plt.show()
         elif misma_escala == 'n':
             fig, ax1 = plt.subplots(figsize=(10, 5))
-            ax1.plot(pd.to_datetime(i[0]['Fecha']), i[0][var1], label=var1)
+            ax1.plot(pd.to_datetime(i[0]['Fecha']), i[0][var1], label=var1, color=(150/255, 0, 24/255))
             ax1.set_title(f'Parcela {i[1]}')
             ax1.set_ylabel(f'{var1}')
             ax2 = ax1.twinx()
-            ax2.plot(pd.to_datetime(i[0]['Fecha']), i[0][var2], label=var2, color='orange')
+            ax2.plot(pd.to_datetime(i[0]['Fecha']), i[0][var2], label=var2, color='g')
             ax2.set_ylabel(f'{var2}')
             ax1.set_xlabel('Fecha')
-            plt.legend()
+            lines, labels = ax1.get_legend_handles_labels()
+            lines2, labels2 = ax2.get_legend_handles_labels()
+            ax2.legend(lines + lines2, labels + labels2, loc='upper right')
+            plt.tight_layout()
             export_path = PurePath(rf"C:\Users\Isai\Documents\Tesis\code\tesis_img\series_tiempo_agro_real_modelo\zafra{zafra}\{var1}_vs_{var2}")
             if not os.path.exists(export_path):
                 os.makedirs(export_path)
             plt.savefig(PurePath(export_path, f"parcela_{i[1]}.png"), dpi=100)
-            plt.tight_layout()
+
             # plt.show()
