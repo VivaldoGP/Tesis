@@ -18,8 +18,8 @@ zafra_df = pd.DataFrame(columns=[
     'parcela',
     'real_mean',
     'model_mean',
-    'real_max',
-    'model_max',
+    'real_pos',
+    'model_pos',
     'real_pos_date',
     'model_pos_date',
     'real_min',
@@ -39,12 +39,12 @@ for i in modelados_files:
             j[0]['Fecha'] = pd.to_datetime(j[0]['Fecha'])
             model_var = i[0][vi_var]
             real_var = j[0][f"{vi_var}_mean"]
-            model_max = model_var.max()
-            real_max = real_var.max()
-            model_max_date_loc = model_var.idxmax()
-            model_max_date = i[0].loc[model_max_date_loc, 'Fecha']
-            real_max_date_loc = real_var.idxmax()
-            real_max_date = j[0].loc[real_max_date_loc, 'Fecha']
+            pos_model = model_var.max()
+            pos_real = real_var.max()
+            model_pos_date_loc = model_var.idxmax()
+            model_pos_date = i[0].loc[model_pos_date_loc, 'Fecha']
+            real_pos_date_loc = real_var.idxmax()
+            real_pos_date = j[0].loc[real_pos_date_loc, 'Fecha']
             model_min = model_var.min()
             real_min = real_var.min()
             sos_modelo_loc = model_var[model_var > 0.2].idxmin()
@@ -61,10 +61,10 @@ for i in modelados_files:
                 'parcela': i[1],
                 'real_mean': real_var.mean(),
                 'model_mean': model_var.mean(),
-                'real_max': real_max,
-                'model_max': model_max,
-                'real_pos_date': real_max_date,
-                'model_pos_date': model_max_date,
+                'real_pos': pos_real,
+                'model_pos': pos_model,
+                'real_pos_date': real_pos_date,
+                'model_pos_date': model_pos_date,
                 'real_min': real_min,
                 'model_min': model_min,
                 'sos_modelo': sos_modelo_date,
