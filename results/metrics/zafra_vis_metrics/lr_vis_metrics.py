@@ -38,4 +38,4 @@ for coef in os.listdir(coefs_path):
 df = pd.DataFrame(df_structure)
 df['rmse'] = df['mse'].apply(math.sqrt)
 df.dropna(inplace=True)
-df.to_csv(PurePath(r'/results/metrics/zafra_vis_metrics', f'zafra{zafra}_vis_metrics.csv'), index=False)
+df.to_csv(PurePath(r'C:\Users\Isai\Documents\Tesis\code\results\metrics\zafra_vis_metrics', f'zafra{zafra}_vis_metrics.csv'), index=False)
