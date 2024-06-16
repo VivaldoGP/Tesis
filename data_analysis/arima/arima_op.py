@@ -5,11 +5,11 @@ from stats_utils.arima import arima_model
 from statsmodels.tools.eval_measures import rmse
 from sklearn.metrics import r2_score
 
-dirs_name = str(input('Ingrese el nombre de la carpeta donde se encuentran los datos: '))
+dirs_name = str(input('Ingrese el nombre de la carpeta donde se encuentran los results: '))
 var_name = str(input('Ingrese el nombre de la variable a analizar: '))
 
 data_dir = rf"C:\Users\Isai\Documents\Tesis\code\datos\agroclimate\{dirs_name}"
-dest_dir = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\arima\{dirs_name}"
+dest_dir = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\results\arima\{dirs_name}"
 model_metadata = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\arima\model_metadata\{dirs_name}"
 
 if not os.path.exists(dest_dir):

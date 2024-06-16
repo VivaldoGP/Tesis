@@ -5,11 +5,11 @@ from sklearn.metrics import mean_squared_error, r2_score
 
 from stats_utils.fourier import fft, adjust_fft_curve, sinusoidal
 
-dirs_name = str(input('Ingrese el nombre de la carpeta donde se encuentran los datos: '))
+dirs_name = str(input('Ingrese el nombre de la carpeta donde se encuentran los results: '))
 var_name = str(input('Ingrese el nombre de la variable a analizar: '))
 
 data_dir = rf"C:\Users\Isai\Documents\Tesis\code\datos\agroclimate\{dirs_name}"
-dest_dir = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\fourier\{dirs_name}"
+dest_dir = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\results\fourier\{dirs_name}"
 params_dir = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\fourier\parametros\{dirs_name}"
 
 for i in os.listdir(data_dir):

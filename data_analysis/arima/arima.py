@@ -15,7 +15,7 @@ folder = 'evapotranspiration'
 
 
 data_dir = rf"C:\Users\Isai\Documents\Tesis\code\datos\agroclimate\{folder}\parcela_{parcela}.csv"
-des_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\arima\{folder}"
+des_dir = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\results\arima\{folder}"
 model_metadata = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\arima\model_metadata\{folder}"
 
 if not os.path.exists(des_dir):

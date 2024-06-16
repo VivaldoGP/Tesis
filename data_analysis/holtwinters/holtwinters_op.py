@@ -2,14 +2,14 @@ import os
 import pandas as pd
 import json
 from stats_utils.holtwinters import holtwinters
-from statsmodels.tools.eval_measures import rmse,mse
+from statsmodels.tools.eval_measures import rmse, mse
 from sklearn.metrics import r2_score
 
-dirs_name = str(input('Ingrese el nombre de la carpeta donde se encuentran los datos: '))
+dirs_name = str(input('Ingrese el nombre de la carpeta donde se encuentran los results: '))
 var_name = str(input('Ingrese el nombre de la variable a analizar: '))
 
 data_dir = rf"C:\Users\Isai\Documents\Tesis\code\datos\agroclimate\{dirs_name}"
-dest_dir = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\holtwinters\{dirs_name}"
+dest_dir = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\results\holtwinters\{dirs_name}"
 model_metadata = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\holtwinters\model_metadata\{dirs_name}"
 
 if not os.path.exists(dest_dir):
