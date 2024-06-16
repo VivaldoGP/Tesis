@@ -1,6 +1,6 @@
 import os
 
-from json import loads, dumps
+from json import dumps, loads
 
 import pandas as pd
 import numpy as np
@@ -24,7 +24,7 @@ data_folder = rf"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\ready_to_anal
 
 coef_folder = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\linear_reg\coeficientes\zafra{zafra}"
 aic_img_folder = rf"C:\Users\Isai\Documents\Tesis\code\tesis_img\aic_vs_degrees\zafra{zafra}"
-model_predicts_folder = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\datos\model_predicts\zafra{zafra}"
+model_predicts_folder = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\results\model_predicts\zafra{zafra}"
 polys_img_folder = fr"C:\Users\Isai\Documents\Tesis\code\tesis_img\polys_vs_data\zafra{zafra}"
 
 for j in os.listdir(data_folder):
@@ -49,7 +49,7 @@ for j in os.listdir(data_folder):
             if not os.path.exists(variable_folder_polys):
                 os.makedirs(variable_folder_polys)
 
-# Aquí empieza el modelo
+            # Aquí empieza el modelo
             x_data = ds['dia'].values.reshape(-1, 1)
             y_data = ds[variable].values
 
@@ -57,7 +57,7 @@ for j in os.listdir(data_folder):
 
             degrees = np.arange(1, 7)
 
-            model_metadata = pd.DataFrame(columns=['degree', 'params', 'aic', 'rsquared', 'mse', 'test'])
+            model_metadata = []
             models = {}
 
             for degree in degrees:
@@ -70,22 +70,22 @@ for j in os.listdir(data_folder):
                 models[degree] = (model, poly_features)
                 y_pred = model.predict(sm.add_constant(x_poly))
 
-                model_metadata = model_metadata._append({'degree': degree,
-                                                        'params': model.params,
-                                                        'aic': model.aic,
-                                                        'rsquared': model.rsquared,
-                                                        'mse': model.mse_model,
-                                                        'test': 1}, ignore_index=True)
+                model_metadata.append({'degree': degree,
+                                       'params': model.params,
+                                       'aic': model.aic,
+                                       'rsquared': model.rsquared,
+                                       'mse': model.mse_model})
+            model_metadata_df = pd.DataFrame(model_metadata)
 
             print(f"parcela:{parcela_id} variable:{variable}")
             if export_metadata:
-                meta_json = loads(model_metadata.to_json(orient='records'))
-                meta_to_export = dumps(meta_json, indent=4)
+                meta_json = model_metadata_df.to_json(orient='records')
+                meta_to_export = dumps(loads(meta_json), indent=4)
 
                 with open(os.path.join(variable_folder_coef, rf"parcela_{parcela_id}.json"), 'w') as f:
                     f.write(meta_to_export)
 
-            poly_degree_aic(model_metadata, 'degree', ['aic', 'rsquared'], f'Parcela {parcela_id}',
+            poly_degree_aic(model_metadata_df, 'degree', ['aic', 'rsquared'], f'Parcela {parcela_id}',
                             'Grado del polinomio', ['AIC', '$R^2$'],
                             export=True,
                             export_path=os.path.join(variable_folder_aic, rf"parcela_{parcela_id}.pdf"))
