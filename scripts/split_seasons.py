@@ -4,9 +4,9 @@ import json
 from some_utils.cleanning_data import harvest_dates
 
 
-root = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\indices_stats_cleaned"
-destiny_path = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\ready_to_analyze"
-harvest_json = r"C:\Users\Isai\Documents\Tesis\code\fechas_claves\harvest.json"
+root = r"../datos/parcelas/indices_stats_cleaned"
+destiny_path = r"../datos/parcelas/ready_to_analyze"
+harvest_json = r"../fechas_claves\harvest.json"
 
 
 with open(harvest_json, encoding='utf-8') as f:
