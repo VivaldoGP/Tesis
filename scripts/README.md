@@ -13,7 +13,7 @@ presentan nubes en la escena y descarga imágenes recortadas a la extensión má
 
 ## Adquisición de los datos de Evapotranspiración
 
-El script [agera5_data.py](https://github.com/VivaldoGP/Tesis/blob/main/scripts/agera5_data.py) descarga los rasters en
+El script [get_agera5_data.py](https://github.com/VivaldoGP/Tesis/blob/main/scripts/agera5_data.py) descarga los rasters en
 el rango de fechas establecido, la URL es la proporcionada por el 
 programa copernicus en el siguiente [link](https://data.apps.fao.org/static/data/index.html?prefix=static%2Fdata%2Fc3s%2FAGERA5_ET0).
 
@@ -54,7 +54,7 @@ Se realiza el mismo procedimiento, pero con los otros datos, las variables son:
 - Relative_Humidity_2m_12h
 - Precipitation_Flux
 
-El script que realiza esta tarea es [process_prep_data.py](https://github.com/VivaldoGP/Tesis/blob/main/scripts/process_prep_data.py),
+El script que realiza esta tarea es [process_climate_data.py](https://github.com/VivaldoGP/Tesis/blob/main/scripts/process_prep_data.py),
 la diferencia con el anterior es que los datos de entrada se encuentran en formato NetCDF, por lo que se utiliza la 
 librería xarray para realizar la extracción de los datos y se exportan a un archivo csv. Por esa razón se tienen dos 
 scripts distintos que tienen la misma finalidad.
@@ -76,31 +76,12 @@ El script que realiza esta tarea es [prepare_data.py](https://github.com/Vivaldo
 el cual está estructurado de la siguiente manera:
 
 
-## Unión de los datos
+## División en temporadas
 
-Una vez que tienen los datos limpios y se cuenta con los valores de la evapotranspiración se procede a realizar la unión
-de ambos conjuntos de datos, para esto se desarrolló el script [merge_data.py](https://github.com/VivaldoGP/Tesis/blob/main/scripts/merge_data.py), 
-el cual realiza la unión de los datos mediante la columna **fecha**, la cual es común en ambos conjuntos de datos, 
-el resultado es un archivo csv con los datos de cada parcela y su respectiva evapotranspiración para cada fecha.
+Los datos presentes corresponden a 2 temporadas diferentes, por lo que se deben dividir mediante el script
+[split_seasons.py]() que se encarga de dividir los datos en dos temporadas, de acuerdo a las fechas de cosecha, al ser
+consecutivas el final de una será la primera de la siguiente.
 
-## Cálculo de la evapotranspiración
-
-Para calcular la evapotranspiración del cultivo se tomó como base la evapotranspiración de referencia obtenida del 
-dataset agERA5, tomando el promedio del **ndvi** de cada parcela y multiplicando por los factores correspondientes se obtuvo
-el coeficiente de cultivo y se multiplicó por la evapotranspiración de referencia para obtener la evapotranspiración del cultivo.
-El script encargado de realizar esta tarea es [kc_et.py](https://github.com/VivaldoGP/Tesis/blob/main/scripts/kc_et.py).
-
-## Última preparación de los datos
-
-Se tienen las diferentes variables para cada una parcela respecto a cada fecha, pero es necesario conocer los días
-transcurridos a partir de la primera fecha, para esto se desarrolló el script [counting_days.py](https://github.com/VivaldoGP/Tesis/blob/main/scripts/counting_days.py), el cual realiza esta
-tarea y exporta un nuevo archivo csv a la carpeta [ready_to_analyze](https://github.com/VivaldoGP/Tesis/tree/main/datos/parcelas/ready_to_analyze), la cual está dividida por zafras.
-
-## Delimitación de los datos meteorológicos
-
-Una vez que se tienen los datos meteorológicos se procede a delimitar el rango de fechas que se utilizarán para el análisis, en este 
-caso las fechas establecidas en el archivo [harvest.json](), el script que realiza esta tarea es [climate_process.py]() y su función
-es 'recortar' el dataframe a las fechas establecidas en el archivo mencionado.
 
 # Diagrama de flujo
 
