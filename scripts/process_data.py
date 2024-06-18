@@ -15,11 +15,11 @@ from some_utils.extract_data import date_from_filename
 
 np.seterr(divide='ignore', invalid='ignore')
 
-sen_images_path = r"C:\Users\Isai\Documents\Tesis\code\Tesis_cloudless"
-parcelas_path = r"C:\Users\Isai\Documents\Tesis\code\Parcelas\poligonos_parcelas\poligonos.shp"
+sen_images_path = r"../Tesis_cloudless"
+parcelas_path = r"../Parcelas/poligonos_parcelas/poligonos.shp"
 
 mem = mem_buffer(parcelas_path, buffer_size=-10)
-parcela = 16
+parcela = 1
 
 parcel_image_list = []
 
@@ -117,4 +117,4 @@ for i in parcel_image_list:
 ndvi_df = pd.DataFrame(indices_stats)
 ndvi_df['Fecha'] = pd.to_datetime(ndvi_df['Fecha'])
 ndvi_df = ndvi_df.sort_values(by=['Fecha'], ascending=True)
-ndvi_df.to_csv(rf"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\indices_stats\parcela_{parcela}.csv", index=False)
+ndvi_df.to_csv(rf"../datos/parcelas/indices_stats/parcela_{parcela}.csv", index=False)

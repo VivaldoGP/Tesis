@@ -5,10 +5,10 @@ import pandas as pd
 from some_utils.cleanning_data import harvest_dates, cloud_filter, treshold_data
 
 
-raw_data_path = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\indices_stats"
-clouds_json = r"C:\Users\Isai\Documents\Tesis\code\fechas_claves\clouds.json"
-harvest_json = r"C:\Users\Isai\Documents\Tesis\code\fechas_claves\harvest.json"
-prepared_data_path = r"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\indices_stats_cleaned"
+raw_data_path = r"../datos/parcelas/indices_stats"
+clouds_json = r"../fechas_claves/clouds.json"
+harvest_json = r"../fechas_claves/harvest.json"
+prepared_data_path = r"../datos/parcelas/indices_stats_cleaned"
 
 
 for parcela in os.listdir(raw_data_path):

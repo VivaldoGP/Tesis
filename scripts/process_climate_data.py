@@ -10,9 +10,9 @@ folder = str(input("Enter the folder path: "))
 var_name = str(input("Enter the variable name: "))
 ds_var_name = str(input("Enter the variable name in the dataset: "))
 
-source_data = rf"C:\Users\Isai\Documents\Tesis\code\agrometa_data\{folder}"
-puntos_path = r"C:\Users\Isai\Documents\Tesis\code\Parcelas\centroides\centroides.shp"
-destiny_path = rf"C:\Users\Isai\Documents\Tesis\code\datos\agroclimate\{folder}"
+source_data = rf"../agrometa_data/{folder}"
+puntos_path = r"../Parcelas/centroides/centroides.shp"
+destiny_path = rf"../datos/agroclimate/{folder}"
 
 if not os.path.exists(destiny_path):
     os.makedirs(destiny_path)

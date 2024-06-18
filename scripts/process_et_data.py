@@ -9,10 +9,10 @@ import os
 
 from some_utils.extract_data import date_from_filename
 
-agera_path = r"C:\Users\Isai\Documents\Tesis\code\agera5data"
-puntos_path = r"C:\Users\Isai\Documents\Tesis\Tesis\Parcelas\centroides\centroides.shp"
+agera_path = r"C../agera5data"
+puntos_path = r"../Parcelas/centroides/centroides.shp"
 
-et_path = r"C:\Users\Isai\Documents\Tesis\code\datos\agroclimate\evapotranspiration"
+et_path = r"../datos/agroclimate/evapotranspiration"
 
 parcelas_df = {}
 
