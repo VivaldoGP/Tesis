@@ -1,12 +1,11 @@
 import os
-from pathlib import PurePath
 import json
 import pandas as pd
 import math
 
 zafra = int(input('Zafra: '))
 
-coefs_path = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\linear_reg\coeficientes\zafra{zafra}"
+coefs_path = rf"../../../data_analysis/linear_reg/coeficientes/zafra{zafra}"
 
 df_structure = {
     'indice': [],
@@ -38,4 +37,5 @@ for coef in os.listdir(coefs_path):
 df = pd.DataFrame(df_structure)
 df['rmse'] = df['mse'].apply(math.sqrt)
 df.dropna(inplace=True)
-df.to_csv(PurePath(r'C:\Users\Isai\Documents\Tesis\code\results\metrics\zafra_vis_metrics', f'zafra{zafra}_vis_metrics.csv'), index=False)
+print(df)
+df.to_csv(f'zafra{zafra}_vis_metrics.csv', index=False)
