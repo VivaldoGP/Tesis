@@ -4,6 +4,7 @@ from matplotlib.dates import DateFormatter, MonthLocator, WeekdayLocator
 import pandas as pd
 from datetime import datetime
 
+
 def simple_line_plot(data: DataFrame | Series, x_data: str, y_data: str,
                      title: str, x_label: str, y_label: str,
                      export: bool = False, export_path: str = None):
@@ -175,9 +176,9 @@ def poly_degree_aic(data: DataFrame, x_data: str, y_data: list,
     plt.style.use('_mpl-gallery')
 
     ax2.xaxis.grid(True, which='major', linestyle='-', color='grey', alpha=0.25, zorder=0)
-    ax2.yaxis.grid(True, which='major', linestyle='--', color='lightcoral', alpha=.5, zorder=0)
+    ax2.yaxis.grid(True, which='major', linestyle='--', color=(150/255, 0, 24/255), alpha=.5, zorder=0)
     # ax2.tick_params(axis='y', labelcolor='red')
-    ax2.bar(data[x_data], data[y_data[1]], color='lightcoral', alpha=0.8, width=0.3,
+    ax2.bar(data[x_data], data[y_data[1]], color=(150/255, 0, 24/255), alpha=0.8, width=0.3,
             linewidth=1.5, edgecolor='black', label='R2')
     ax2.set(xlabel=x_label, ylabel=y_label[1])
     ax2.legend(loc='upper left')
