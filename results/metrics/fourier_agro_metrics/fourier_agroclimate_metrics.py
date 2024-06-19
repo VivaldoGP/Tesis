@@ -1,10 +1,9 @@
 import os
-from pathlib import PurePath
 import json
 import pandas as pd
 import math
 
-coefs_path = r"C:\Users\Isai\Documents\Tesis\code\data_analysis\fourier\parametros"
+coefs_path = r"../../../data_analysis/fourier/parametros"
 
 df_structure = {
     'variable': [],
@@ -37,4 +36,4 @@ for coef in os.listdir(coefs_path):
 df = pd.DataFrame(df_structure)
 df['rmse'] = df['mse'].apply(math.sqrt)
 df.dropna(inplace=True)
-df.to_csv(PurePath(r'C:\Users\Isai\Documents\Tesis\code\results\metrics\fourier_agro_metrics', f'fourier_agroclimate_metrics.csv'), index=False)
+df.to_csv(r'fourier_agroclimate_metrics.csv', index=False)

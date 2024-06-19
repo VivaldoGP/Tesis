@@ -1,10 +1,9 @@
 import os
-from pathlib import PurePath
 import json
 import pandas as pd
 
 
-coefs_path = r"C:\Users\Isai\Documents\Tesis\code\data_analysis\holtwinters\model_metadata"
+coefs_path = r"../../../data_analysis/holtwinters/model_metadata"
 
 df_structure = {
     'variable': [],
@@ -32,4 +31,4 @@ for coef in os.listdir(coefs_path):
 
 df = pd.DataFrame(df_structure)
 df.dropna(inplace=True)
-df.to_csv(PurePath(r'C:\Users\Isai\Documents\Tesis\code\results\metrics\holtwinters_agro_metrics', f'holtwinters_agroclimate_metrics.csv'), index=False)
+df.to_csv(f'holtwinters_agroclimate_metrics.csv', index=False)
