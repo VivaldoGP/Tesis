@@ -5,8 +5,8 @@ from pathlib import PurePath
 vi_var = str(input('Variable: '))
 zafra = int(input('Zafra: '))
 
-reales = rf"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\ready_to_analyze\zafra{zafra}"
-modelados = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\all_vars\zafra{zafra}"
+reales = rf"../../datos/parcelas/ready_to_analyze/zafra{zafra}"
+modelados = rf"../../data_analysis/all_vars/zafra{zafra}"
 
 modelados_files = [(pd.read_csv(PurePath(modelados, file), parse_dates=True), int(file.split('.')[0].split('_')[1])
                     ) for file in os.listdir(modelados) if file.endswith(".csv")]
@@ -75,4 +75,4 @@ for i in modelados_files:
                 'season_length_modelo': season_length_modelo
             }, ignore_index=True)
 
-zafra_df.to_csv(PurePath(rf"C:\Users\Isai\Documents\Tesis\code\results\feno_markers\zafra{zafra}_{vi_var}.csv"), index=False)
+zafra_df.to_csv(PurePath(rf"../feno_markers/zafra{zafra}_{vi_var}.csv"), index=False)
