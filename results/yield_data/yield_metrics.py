@@ -7,7 +7,7 @@ import math
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
-main_path = r"C:\Users\Isai\Documents\Tesis\code\results\yield_data\2021_modelado.csv"
+main_path = r"data/zafras_modelado.csv"
 
 ds = pd.read_csv(main_path)
 
@@ -50,5 +50,6 @@ for col in ds.drop(columns=['parcela', 'rendimiento']).columns:
 
 results = pd.DataFrame({'Variable': var_name, 'R2': r2, 'P_values': p_values, 'MSE': mse})
 results['RMSE'] = results['MSE'].apply(lambda b: math.sqrt(b))
-results.to_csv(r"C:\Users\Isai\Documents\Tesis\code\results\yield_data\metrics\2021_modelado.csv", index=False)
-ds.to_csv(r"C:\Users\Isai\Documents\Tesis\code\results\yield_data\predicts\2021_modelado.csv", index=False)
+print(results.sort_values(by='R2', ascending=False))
+results.to_csv(r"score/zafras_modelado.csv", index=False)
+ds.to_csv(r"predicts/zafras_modelado.csv", index=False)
