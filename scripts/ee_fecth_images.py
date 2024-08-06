@@ -75,7 +75,7 @@ def export_images(folder: str, img: Image, aoi: Geometry, to_crs: str, filename:
 
 
 start_date = Date('2020-01-01')
-end_date = Date('2023-12-31')
+end_date = Date('2024-08-01')
 
 ic = ImageCollection("COPERNICUS/S2_SR_HARMONIZED").filterDate(start=start_date, opt_end=end_date).filter(
     Filter.eq('MGRS_TILE', '14QML')
@@ -83,7 +83,7 @@ ic = ImageCollection("COPERNICUS/S2_SR_HARMONIZED").filterDate(start=start_date,
 
 print(ic.size().getInfo())
 
-with open(r"C:\Users\Isai\Documents\Tesis\code\Parcelas\poligonos_parcelas.geojson", encoding='utf-8') as geo:
+with open(r"../Parcelas/poligonos_parcelas.geojson", encoding='utf-8') as geo:
     parcels = json.load(geo)
 
 
@@ -104,10 +104,13 @@ for parcel in parcels['features']:
             cloudy_pixels = cloud_pixels(image=image_, cloud_percent=50, aoi=parcel_bbox.geometry())
             inside += 1
             if '1' not in cloudy_pixels[0]:
-                print(f"Image Id: {image_.id().getInfo()} limpia, {cloudy_pixels[0]}, Parcela: {parcel_feature.getInfo()['properties']['Id']}")
-                export_images(folder='Tesis_cloudless', img=image_, aoi=parcel_bbox.geometry(), to_crs='EPSG:32614', filename=f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}")
+                print(f"Image Id: {image_.id().getInfo()} limpia, {cloudy_pixels[0]}, "
+                      f"Parcela: {parcel_feature.getInfo()['properties']['Id']}")
+                export_images(folder='Tesis_cloudless_definitivo', img=image_, aoi=parcel_bbox.geometry(),
+                              to_crs='EPSG:32614',
+                              filename=f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}")
                 # print(f"{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}")
-                with open(rf"G:/Mi unidad/Proyecto_tesis/metadata_cloudless/{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}.json", 'w') as f:
+                with open(rf"G:/Mi unidad/Proyecto_tesis/meta/{parcel_feature.getInfo()['properties']['Id']}_{image_.id().getInfo()}.json", 'w') as f:
                     f.write(img_props)
                 cloud_free += 1
             '''

@@ -22,13 +22,18 @@ for parcela in os.listdir(root):
         parcel_id = harvest['id']
         start_date = harvest['start']
         mid_date = harvest['mid']
+        mid2_date = harvest['mid2']
         end_date = harvest['end']
         if parcel_id == int(parcela_id):
             data_21 = harvest_dates(data, start_date, mid_date)
-            data_22 = harvest_dates(data, mid_date, end_date)
+            data_22 = harvest_dates(data, mid_date, mid2_date)
+            data_23 = harvest_dates(data, mid2_date, end_date)
             data_21['dia'] = (data_21['Fecha'] - data_21['Fecha'].min()).dt.days + 1
             data_22['dia'] = (data_22['Fecha'] - data_22['Fecha'].min()).dt.days + 1
+            data_23['dia'] = (data_23['Fecha'] - data_23['Fecha'].min()).dt.days + 1
             data_21.to_csv(os.path.join(os.path.join(destiny_path, 'zafra2021'),
                                         f'parcela_{parcela_id}.csv'), index=False)
             data_22.to_csv(os.path.join(os.path.join(destiny_path, 'zafra2022'),
+                                        f'parcela_{parcela_id}.csv'), index=False)
+            data_23.to_csv(os.path.join(os.path.join(destiny_path, 'zafra2023'),
                                         f'parcela_{parcela_id}.csv'), index=False)

@@ -9,17 +9,17 @@ import rasterio
 from rasterstats import zonal_stats
 
 from vector_utils.geopro_tools import mem_buffer
-from raster_utils.spectral_indices import ndvi, msi, ndmi, evi, gndvi, ndwi, cire, ndre1, grndvi
+from raster_utils.spectral_indices import ndvi, msi, ndmi, evi, gndvi, ndwi, cire, ndre1
 
 from some_utils.extract_data import date_from_filename
 
 np.seterr(divide='ignore', invalid='ignore')
 
-sen_images_path = r"../Tesis_cloudless"
+sen_images_path = r"../Tesis_cloudless_definitivo"
 parcelas_path = r"../Parcelas/poligonos_parcelas/poligonos.shp"
 
 mem = mem_buffer(parcelas_path, buffer_size=-10)
-parcela = 1
+parcela = 16
 
 parcel_image_list = []
 
@@ -54,7 +54,6 @@ for i in parcel_image_list:
                             ndwi_img = ndwi(isrc)
                             cire_img = cire(isrc)
                             ndre1_img = ndre1(isrc)
-                            grndvi_img = grndvi(isrc)
 
                             zonal_stats_ndvi = zonal_stats(features_, ndvi_img,
                                                            affine=transform, nodata=-999)
@@ -72,8 +71,6 @@ for i in parcel_image_list:
                                                            affine=transform, nodata=-999)
                             zonal_stats_ndre1 = zonal_stats(features_, ndre1_img,
                                                             affine=transform, nodata=-999)
-                            zonal_stats_grndvi = zonal_stats(features_, grndvi_img,
-                                                             affine=transform, nodata=-999)
 
                             index_start += 1
                             print(i.get('Img_path'))
@@ -104,10 +101,7 @@ for i in parcel_image_list:
                                                   "cire_max": zonal_stats_cire[0]['max'],
                                                   "ndre1_mean": zonal_stats_ndre1[0]['mean'],
                                                   "ndre1_min": zonal_stats_ndre1[0]['min'],
-                                                  "ndre1_max": zonal_stats_ndre1[0]['max'],
-                                                  "grndvi_mean": zonal_stats_grndvi[0]['mean'],
-                                                  "grndvi_min": zonal_stats_grndvi[0]['min'],
-                                                  "grndvi_max": zonal_stats_grndvi[0]['max']})
+                                                  "ndre1_max": zonal_stats_ndre1[0]['max']})
 
                     except rasterio.errors.RasterioIOError:
                         print(f'Algo salió mal en {i}')

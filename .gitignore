@@ -1,4 +1,4 @@
-.venv
+venv
 /agera5data/
 /precipitation/
 /temperature/
@@ -8,3 +8,4 @@
 /garbage_tests/
 /test/
 /Tesis_cloudless/
+/Tesis_cloudless_definitivo/
