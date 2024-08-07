@@ -4,12 +4,13 @@ import fiona
 from shapely.geometry import shape
 
 import pandas as pd
+import numpy as np
 
 import os
 
 from some_utils.extract_data import date_from_filename
 
-agera_path = r"C../agera5data"
+agera_path = r"../agera5data"
 puntos_path = r"../Parcelas/centroides/centroides.shp"
 
 et_path = r"../datos/agroclimate/evapotranspiration"
@@ -43,5 +44,6 @@ for file in os.listdir(agera_path):
                     ])
 
 for id_, df_ in parcelas_df.items():
+    df_.replace([-9999], 0, inplace=True)
     df_.to_csv(os.path.join(et_path, f"parcela_{id_}.csv"), index=False)
     print(id_, df_)
