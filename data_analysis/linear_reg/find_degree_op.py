@@ -1,5 +1,5 @@
 import os
-
+from pathlib import Path
 from json import dumps, loads
 
 import pandas as pd
@@ -20,16 +20,16 @@ focus_vars = ['ndvi_mean', 'gndvi_mean', 'msi_mean', 'ndmi_mean', 'cire_mean', '
 zafra = int(input('Ingrese el año de la zafra: '))
 export_metadata = bool(input('Exportar metadata? (True/False): '))
 
-data_folder = rf"C:\Users\Isai\Documents\Tesis\code\datos\parcelas\ready_to_analyze\zafra{zafra}"
+data_folder = rf"../../datos/parcelas/ready_to_analyze/zafra{zafra}"
 
-coef_folder = rf"C:\Users\Isai\Documents\Tesis\code\data_analysis\linear_reg\coeficientes\zafra{zafra}"
-aic_img_folder = rf"C:\Users\Isai\Documents\Tesis\code\tesis_img\aic_vs_degrees\zafra{zafra}"
-model_predicts_folder = fr"C:\Users\Isai\Documents\Tesis\code\data_analysis\results\model_predicts\zafra{zafra}"
-polys_img_folder = fr"C:\Users\Isai\Documents\Tesis\code\tesis_img\polys_vs_data\zafra{zafra}"
+coef_folder = rf"coeficientes/zafra{zafra}"
+aic_img_folder = rf"../../tesis_img/aic_vs_degrees/zafra{zafra}"
+model_predicts_folder = fr"../datos/model_predicts/zafra{zafra}"
+polys_img_folder = fr"../../tesis_img/polys_vs_data/zafra{zafra}"
 
-for j in os.listdir(data_folder):
-    ds = pd.read_csv(os.path.join(data_folder, j), parse_dates=['Fecha'])
-    parcela_id = j.split('_')[-1].split('.')[0]
+for i in os.listdir(data_folder):
+    ds = pd.read_csv(os.path.join(data_folder, i), parse_dates=['Fecha'])
+    parcela_id = i.split('_')[-1].split('.')[0]
     for variable in ds.columns:
         if variable in focus_vars:
             # print(f'Parcela {parcela_id} - Variable {variable}')
@@ -104,11 +104,11 @@ for j in os.listdir(data_folder):
 
                 x_poly = poly_degree.fit_transform(x_data)
                 y_pred = model.predict(sm.add_constant(x_poly))
-                ds[f'{variable}_pred_{degree}'] = y_pred
+                ds[f'pred_{degree}'] = y_pred
 
-                ax[degree - 1].plot(ds['dia'], ds[variable], label='Real', color='royalblue')
-                ax[degree - 1].plot(ds['dia'], ds[f'{variable}_pred_{degree}'], label=f'Grado {degree}',
-                                    color='coral')
+                ax[degree - 1].plot(ds['dia'], ds[variable], label='Real', color='#FFBE98')
+                ax[degree - 1].plot(ds['dia'], ds[f'pred_{degree}'], label=f'Grado {degree}',
+                                    color='#BE3455')
                 ax[degree - 1].set_title(f'Grado {degree}')
                 ax[degree - 1].legend(loc='lower right')
 
