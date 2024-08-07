@@ -176,18 +176,18 @@ def poly_degree_aic(data: DataFrame, x_data: str, y_data: list,
     plt.style.use('_mpl-gallery')
 
     ax2.xaxis.grid(True, which='major', linestyle='-', color='grey', alpha=0.25, zorder=0)
-    ax2.yaxis.grid(True, which='major', linestyle='--', color=(150/255, 0, 24/255), alpha=.5, zorder=0)
+    ax2.yaxis.grid(True, which='major', linestyle='--', color='#BE3455', alpha=.5, zorder=0)
     # ax2.tick_params(axis='y', labelcolor='red')
-    ax2.bar(data[x_data], data[y_data[1]], color=(150/255, 0, 24/255), alpha=0.8, width=0.3,
+    ax2.bar(data[x_data], data[y_data[1]], color='#FFBE98', alpha=1, width=0.3,
             linewidth=1.5, edgecolor='black', label='R2')
     ax2.set(xlabel=x_label, ylabel=y_label[1])
     ax2.legend(loc='upper left')
 
     ax1 = ax2.twinx()
 
-    ax1.yaxis.grid(True, which='major', linestyle='--', color='cornflowerblue', alpha=.25, zorder=0)
+    ax1.yaxis.grid(True, which='major', linestyle='--', color='#BE3455', alpha=.25, zorder=0)
     ax1.xaxis.grid(True, which='major', linestyle='--', color='grey', alpha=.25, zorder=0)
-    ax1.plot(data[x_data], data[y_data[0]], color='cornflowerblue', linewidth=1.5, linestyle='-', alpha=0.7,
+    ax1.plot(data[x_data], data[y_data[0]], color='#BE3455', linewidth=1, linestyle='-', alpha=0.8,
              label='AIC')
     ax1.set(xlabel=x_label, ylabel=y_label[0])
     ax1.legend(loc='upper right')
