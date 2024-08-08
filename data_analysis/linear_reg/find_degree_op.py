@@ -106,7 +106,7 @@ for i in os.listdir(data_folder):
                 y_pred = model.predict(sm.add_constant(x_poly))
                 ds[f'pred_{degree}'] = y_pred
 
-                ax[degree - 1].plot(ds['dia'], ds[variable], label='Real', color='#FFBE98')
+                ax[degree - 1].plot(ds['dia'], ds[variable], label='Real', color='#6667AB')
                 ax[degree - 1].plot(ds['dia'], ds[f'pred_{degree}'], label=f'Grado {degree}',
                                     color='#BE3455')
                 ax[degree - 1].set_title(f'Grado {degree}')
