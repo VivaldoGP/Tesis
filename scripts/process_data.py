@@ -9,7 +9,7 @@ import rasterio
 from rasterstats import zonal_stats
 
 from vector_utils.geopro_tools import mem_buffer
-from raster_utils.spectral_indices import ndvi, msi, ndmi, evi, gndvi, ndwi, cire, ndre1
+from raster_utils.spectral_indices import ndvi, msi, ndmi, gndvi, cire, ndre1, ndre
 
 from some_utils.extract_data import date_from_filename
 
@@ -50,10 +50,9 @@ for i in parcel_image_list:
                             ndmi_img = ndmi(isrc)
                             msi_img = msi(isrc)
                             gndvi_img = gndvi(isrc)
-                            evi_img = evi(isrc)
-                            ndwi_img = ndwi(isrc)
                             cire_img = cire(isrc)
                             ndre1_img = ndre1(isrc)
+                            ndre_img = ndre(isrc)
 
                             zonal_stats_ndvi = zonal_stats(features_, ndvi_img,
                                                            affine=transform, nodata=-999)
@@ -63,14 +62,12 @@ for i in parcel_image_list:
                                                           affine=transform, nodata=-999)
                             zonal_stats_gndvi = zonal_stats(features_, gndvi_img,
                                                             affine=transform, nodata=-999)
-                            zonal_stats_evi = zonal_stats(features_, evi_img,
-                                                          affine=transform, nodata=-999)
-                            zonal_stats_ndwi = zonal_stats(features_, ndwi_img,
-                                                           affine=transform, nodata=-999)
                             zonal_stats_cire = zonal_stats(features_, cire_img,
                                                            affine=transform, nodata=-999)
                             zonal_stats_ndre1 = zonal_stats(features_, ndre1_img,
                                                             affine=transform, nodata=-999)
+                            zonal_stats_ndre = zonal_stats(features_, ndre_img,
+                                                           affine=transform, nodata=-999)
 
                             index_start += 1
                             print(i.get('Img_path'))
@@ -90,18 +87,15 @@ for i in parcel_image_list:
                                                   "gndvi_mean": zonal_stats_gndvi[0]['mean'],
                                                   "gndvi_min": zonal_stats_gndvi[0]['min'],
                                                   "gndvi_max": zonal_stats_gndvi[0]['max'],
-                                                  "evi_mean": zonal_stats_evi[0]['mean'],
-                                                  "evi_min": zonal_stats_evi[0]['min'],
-                                                  "evi_max": zonal_stats_evi[0]['max'],
-                                                  "ndwi_mean": zonal_stats_ndwi[0]['mean'],
-                                                  "ndwi_min": zonal_stats_ndwi[0]['min'],
-                                                  "ndwi_max": zonal_stats_ndwi[0]['max'],
                                                   "cire_mean": zonal_stats_cire[0]['mean'],
                                                   "cire_min": zonal_stats_cire[0]['min'],
                                                   "cire_max": zonal_stats_cire[0]['max'],
                                                   "ndre1_mean": zonal_stats_ndre1[0]['mean'],
                                                   "ndre1_min": zonal_stats_ndre1[0]['min'],
-                                                  "ndre1_max": zonal_stats_ndre1[0]['max']})
+                                                  "ndre1_max": zonal_stats_ndre1[0]['max'],
+                                                  "ndre_mean": zonal_stats_ndre[0]['mean'],
+                                                  "ndre_min": zonal_stats_ndre[0]['min'],
+                                                  "ndre_max": zonal_stats_ndre[0]['max']})
 
                     except rasterio.errors.RasterioIOError:
                         print(f'Algo salió mal en {i}')

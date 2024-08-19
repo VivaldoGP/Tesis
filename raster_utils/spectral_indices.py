@@ -25,7 +25,8 @@ def gndvi(img: DatasetReader, nir_band: int = 8, green_band: int = 3):
     nir_band = img.read(nir_band)
     green_band = img.read(green_band)
 
-    gndvi_band = (nir_band.astype(float) - green_band.astype(float)) / (nir_band.astype(float) + green_band.astype(float))
+    gndvi_band = (nir_band.astype(float) - green_band.astype(float)) / (nir_band.astype(float) +
+                                                                        green_band.astype(float))
 
     return gndvi_band
 
@@ -133,6 +134,25 @@ def ndre1(img: DatasetReader, re2_band: int = 6, re1_band: int = 5):
     re1_band = img.read(re1_band)
 
     ndre1_band = (re2_band.astype(float) - re1_band.astype(float)) / (re2_band.astype(float) + re1_band.astype(float))
+
+    return ndre1_band
+
+
+def ndre(img: DatasetReader, nir_band: int = 8, re1_band: int = 5):
+    """
+    Calcula el ndre1
+    Args:
+        nir_band:
+        re1_band:
+        img: un imagen de rasterio
+
+    Returns:
+        un ndarray con los valores del ndre1 para pixel
+    """
+    nir_band = img.read(nir_band)
+    re1_band = img.read(re1_band)
+
+    ndre1_band = (nir_band.astype(float) - re1_band.astype(float)) / (nir_band.astype(float) + re1_band.astype(float))
 
     return ndre1_band
 
