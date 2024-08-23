@@ -7,7 +7,7 @@ import math
 pd.set_option('display.max_columns', None)
 pd.set_option('display.max_rows', None)
 
-main_path = r"data/zafras_modelado.csv"
+main_path = r"data/zafra2122_2223_m.csv"
 
 ds = pd.read_csv(main_path)
 
@@ -15,6 +15,7 @@ var_name = []
 r2 = []
 p_values = []
 mse = []
+params = []
 
 bye_cols = ['ndvi_max_date', 'gndvi_max_date']
 for column in bye_cols:
@@ -36,6 +37,7 @@ for col in ds.drop(columns=['parcela', 'rendimiento']).columns:
         r2.append(model.rsquared)
         p_values.append(model.pvalues)
         mse.append(model.mse_model)
+        params.append(model.params)
         # print(model.summary(), model.pvalues)
     else:
         x = ds[col].values.reshape(-1, 1)
@@ -46,10 +48,11 @@ for col in ds.drop(columns=['parcela', 'rendimiento']).columns:
         r2.append(model.rsquared)
         p_values.append(model.pvalues)
         mse.append(model.mse_model)
+        params.append(model.params)
         # print(model.summary(), model.pvalues)
 
-results = pd.DataFrame({'Variable': var_name, 'R2': r2, 'P_values': p_values, 'MSE': mse})
+results = pd.DataFrame({'Variable': var_name, 'R2': r2, 'P_values': p_values, 'MSE': mse, 'Params': params})
 results['RMSE'] = results['MSE'].apply(lambda b: math.sqrt(b))
 print(results.sort_values(by='R2', ascending=False))
-results.to_csv(r"score/zafras_modelado.csv", index=False)
-ds.to_csv(r"predicts/zafras_modelado.csv", index=False)
+results.to_csv(r"score/zafra2122_2223_m.csv", index=False)
+ds.to_csv(r"predicts/zafra2122_2223_m.csv", index=False)
