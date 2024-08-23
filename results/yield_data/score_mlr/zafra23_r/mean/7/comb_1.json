@@ -1,0 +1,28 @@
+{
+    "coefs": {
+        "const": -1508.6277665446742,
+        "ndvi_mean": 2420.445682769623,
+        "gndvi_mean": 1184.0304186357844,
+        "cire_mean": 101.09804198569009,
+        "ndre1_mean": -5459.235009021424,
+        "ndre_mean": 1299.5590944659962,
+        "ndmi_mean": 666.284617369648,
+        "msi_mean": 687.1916114062501
+    },
+    "p_values": {
+        "const": NaN,
+        "ndvi_mean": NaN,
+        "gndvi_mean": NaN,
+        "cire_mean": NaN,
+        "ndre1_mean": NaN,
+        "ndre_mean": NaN,
+        "ndmi_mean": NaN,
+        "msi_mean": NaN
+    },
+    "rsquared": 1.0,
+    "aic": -393.14689921902885,
+    "fvalue": NaN,
+    "f_pvalue": NaN,
+    "mse_model": 138.83928571428572,
+    "rmse_model": 11.783008347374015
+}
