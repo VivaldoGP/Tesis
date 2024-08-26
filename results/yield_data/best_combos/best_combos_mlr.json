@@ -1,0 +1,602 @@
+[
+    {
+        "file": "score_mlr\\zafra2122_2223_m\\max\\2\\comb_8.json",
+        "dataset": "zafra2122_2223_m",
+        "tipo": "max",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_m\\mean\\2\\comb_12.json",
+        "dataset": "zafra2122_2223_m",
+        "tipo": "mean",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_m\\max\\3\\comb_9.json",
+        "dataset": "zafra2122_2223_m",
+        "tipo": "max",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_m\\mean\\3\\comb_27.json",
+        "dataset": "zafra2122_2223_m",
+        "tipo": "mean",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_m\\max\\4\\comb_5.json",
+        "dataset": "zafra2122_2223_m",
+        "tipo": "max",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_m\\mean\\4\\comb_35.json",
+        "dataset": "zafra2122_2223_m",
+        "tipo": "mean",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_m\\max\\5\\comb_1.json",
+        "dataset": "zafra2122_2223_m",
+        "tipo": "max",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_m\\mean\\5\\comb_21.json",
+        "dataset": "zafra2122_2223_m",
+        "tipo": "mean",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_m\\mean\\6\\comb_7.json",
+        "dataset": "zafra2122_2223_m",
+        "tipo": "mean",
+        "var_nums": "6"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_m\\mean\\7\\comb_1.json",
+        "dataset": "zafra2122_2223_m",
+        "tipo": "mean",
+        "var_nums": "7"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_r\\max\\2\\comb_10.json",
+        "dataset": "zafra2122_2223_r",
+        "tipo": "max",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_r\\mean\\2\\comb_21.json",
+        "dataset": "zafra2122_2223_r",
+        "tipo": "mean",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_r\\max\\3\\comb_6.json",
+        "dataset": "zafra2122_2223_r",
+        "tipo": "max",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_r\\mean\\3\\comb_25.json",
+        "dataset": "zafra2122_2223_r",
+        "tipo": "mean",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_r\\max\\4\\comb_3.json",
+        "dataset": "zafra2122_2223_r",
+        "tipo": "max",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_r\\mean\\4\\comb_29.json",
+        "dataset": "zafra2122_2223_r",
+        "tipo": "mean",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_r\\max\\5\\comb_1.json",
+        "dataset": "zafra2122_2223_r",
+        "tipo": "max",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_r\\mean\\5\\comb_19.json",
+        "dataset": "zafra2122_2223_r",
+        "tipo": "mean",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_r\\mean\\6\\comb_7.json",
+        "dataset": "zafra2122_2223_r",
+        "tipo": "mean",
+        "var_nums": "6"
+    },
+    {
+        "file": "score_mlr\\zafra2122_2223_r\\mean\\7\\comb_1.json",
+        "dataset": "zafra2122_2223_r",
+        "tipo": "mean",
+        "var_nums": "7"
+    },
+    {
+        "file": "score_mlr\\zafra21_m\\max\\2\\comb_9.json",
+        "dataset": "zafra21_m",
+        "tipo": "max",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra21_m\\mean\\2\\comb_13.json",
+        "dataset": "zafra21_m",
+        "tipo": "mean",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra21_m\\max\\3\\comb_7.json",
+        "dataset": "zafra21_m",
+        "tipo": "max",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra21_m\\mean\\3\\comb_30.json",
+        "dataset": "zafra21_m",
+        "tipo": "mean",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra21_m\\max\\4\\comb_5.json",
+        "dataset": "zafra21_m",
+        "tipo": "max",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra21_m\\mean\\4\\comb_25.json",
+        "dataset": "zafra21_m",
+        "tipo": "mean",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra21_m\\max\\5\\comb_1.json",
+        "dataset": "zafra21_m",
+        "tipo": "max",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra21_m\\mean\\5\\comb_5.json",
+        "dataset": "zafra21_m",
+        "tipo": "mean",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra21_m\\mean\\6\\comb_2.json",
+        "dataset": "zafra21_m",
+        "tipo": "mean",
+        "var_nums": "6"
+    },
+    {
+        "file": "score_mlr\\zafra21_m\\mean\\7\\comb_1.json",
+        "dataset": "zafra21_m",
+        "tipo": "mean",
+        "var_nums": "7"
+    },
+    {
+        "file": "score_mlr\\zafra21_r\\max\\2\\comb_1.json",
+        "dataset": "zafra21_r",
+        "tipo": "max",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra21_r\\mean\\2\\comb_7.json",
+        "dataset": "zafra21_r",
+        "tipo": "mean",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra21_r\\max\\3\\comb_7.json",
+        "dataset": "zafra21_r",
+        "tipo": "max",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra21_r\\mean\\3\\comb_29.json",
+        "dataset": "zafra21_r",
+        "tipo": "mean",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra21_r\\max\\4\\comb_5.json",
+        "dataset": "zafra21_r",
+        "tipo": "max",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra21_r\\mean\\4\\comb_24.json",
+        "dataset": "zafra21_r",
+        "tipo": "mean",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra21_r\\max\\5\\comb_1.json",
+        "dataset": "zafra21_r",
+        "tipo": "max",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra21_r\\mean\\5\\comb_4.json",
+        "dataset": "zafra21_r",
+        "tipo": "mean",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra21_r\\mean\\6\\comb_4.json",
+        "dataset": "zafra21_r",
+        "tipo": "mean",
+        "var_nums": "6"
+    },
+    {
+        "file": "score_mlr\\zafra21_r\\mean\\7\\comb_1.json",
+        "dataset": "zafra21_r",
+        "tipo": "mean",
+        "var_nums": "7"
+    },
+    {
+        "file": "score_mlr\\zafra22_m\\max\\2\\comb_7.json",
+        "dataset": "zafra22_m",
+        "tipo": "max",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra22_m\\mean\\2\\comb_21.json",
+        "dataset": "zafra22_m",
+        "tipo": "mean",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra22_m\\max\\3\\comb_8.json",
+        "dataset": "zafra22_m",
+        "tipo": "max",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra22_m\\mean\\3\\comb_4.json",
+        "dataset": "zafra22_m",
+        "tipo": "mean",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra22_m\\max\\4\\comb_2.json",
+        "dataset": "zafra22_m",
+        "tipo": "max",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra22_m\\mean\\4\\comb_30.json",
+        "dataset": "zafra22_m",
+        "tipo": "mean",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra22_m\\max\\5\\comb_1.json",
+        "dataset": "zafra22_m",
+        "tipo": "max",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra22_m\\mean\\5\\comb_10.json",
+        "dataset": "zafra22_m",
+        "tipo": "mean",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra22_m\\mean\\6\\comb_5.json",
+        "dataset": "zafra22_m",
+        "tipo": "mean",
+        "var_nums": "6"
+    },
+    {
+        "file": "score_mlr\\zafra22_m\\mean\\7\\comb_1.json",
+        "dataset": "zafra22_m",
+        "tipo": "mean",
+        "var_nums": "7"
+    },
+    {
+        "file": "score_mlr\\zafra22_r\\max\\2\\comb_10.json",
+        "dataset": "zafra22_r",
+        "tipo": "max",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra22_r\\mean\\2\\comb_21.json",
+        "dataset": "zafra22_r",
+        "tipo": "mean",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra22_r\\max\\3\\comb_9.json",
+        "dataset": "zafra22_r",
+        "tipo": "max",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra22_r\\mean\\3\\comb_34.json",
+        "dataset": "zafra22_r",
+        "tipo": "mean",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra22_r\\max\\4\\comb_3.json",
+        "dataset": "zafra22_r",
+        "tipo": "max",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra22_r\\mean\\4\\comb_30.json",
+        "dataset": "zafra22_r",
+        "tipo": "mean",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra22_r\\max\\5\\comb_1.json",
+        "dataset": "zafra22_r",
+        "tipo": "max",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra22_r\\mean\\5\\comb_19.json",
+        "dataset": "zafra22_r",
+        "tipo": "mean",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra22_r\\mean\\6\\comb_4.json",
+        "dataset": "zafra22_r",
+        "tipo": "mean",
+        "var_nums": "6"
+    },
+    {
+        "file": "score_mlr\\zafra22_r\\mean\\7\\comb_1.json",
+        "dataset": "zafra22_r",
+        "tipo": "mean",
+        "var_nums": "7"
+    },
+    {
+        "file": "score_mlr\\zafra23_m\\max\\2\\comb_1.json",
+        "dataset": "zafra23_m",
+        "tipo": "max",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra23_m\\mean\\2\\comb_11.json",
+        "dataset": "zafra23_m",
+        "tipo": "mean",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra23_m\\max\\3\\comb_9.json",
+        "dataset": "zafra23_m",
+        "tipo": "max",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra23_m\\mean\\3\\comb_29.json",
+        "dataset": "zafra23_m",
+        "tipo": "mean",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra23_m\\max\\4\\comb_3.json",
+        "dataset": "zafra23_m",
+        "tipo": "max",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra23_m\\mean\\4\\comb_18.json",
+        "dataset": "zafra23_m",
+        "tipo": "mean",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra23_m\\max\\5\\comb_1.json",
+        "dataset": "zafra23_m",
+        "tipo": "max",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra23_m\\mean\\5\\comb_12.json",
+        "dataset": "zafra23_m",
+        "tipo": "mean",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra23_m\\mean\\6\\comb_2.json",
+        "dataset": "zafra23_m",
+        "tipo": "mean",
+        "var_nums": "6"
+    },
+    {
+        "file": "score_mlr\\zafra23_m\\mean\\7\\comb_1.json",
+        "dataset": "zafra23_m",
+        "tipo": "mean",
+        "var_nums": "7"
+    },
+    {
+        "file": "score_mlr\\zafra23_r\\max\\2\\comb_1.json",
+        "dataset": "zafra23_r",
+        "tipo": "max",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra23_r\\mean\\2\\comb_11.json",
+        "dataset": "zafra23_r",
+        "tipo": "mean",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafra23_r\\max\\3\\comb_5.json",
+        "dataset": "zafra23_r",
+        "tipo": "max",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra23_r\\mean\\3\\comb_19.json",
+        "dataset": "zafra23_r",
+        "tipo": "mean",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafra23_r\\max\\4\\comb_1.json",
+        "dataset": "zafra23_r",
+        "tipo": "max",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra23_r\\mean\\4\\comb_18.json",
+        "dataset": "zafra23_r",
+        "tipo": "mean",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafra23_r\\max\\5\\comb_1.json",
+        "dataset": "zafra23_r",
+        "tipo": "max",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra23_r\\mean\\5\\comb_8.json",
+        "dataset": "zafra23_r",
+        "tipo": "mean",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafra23_r\\mean\\6\\comb_3.json",
+        "dataset": "zafra23_r",
+        "tipo": "mean",
+        "var_nums": "6"
+    },
+    {
+        "file": "score_mlr\\zafra23_r\\mean\\7\\comb_1.json",
+        "dataset": "zafra23_r",
+        "tipo": "mean",
+        "var_nums": "7"
+    },
+    {
+        "file": "score_mlr\\zafras_m\\max\\2\\comb_4.json",
+        "dataset": "zafras_m",
+        "tipo": "max",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafras_m\\mean\\2\\comb_16.json",
+        "dataset": "zafras_m",
+        "tipo": "mean",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafras_m\\max\\3\\comb_9.json",
+        "dataset": "zafras_m",
+        "tipo": "max",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafras_m\\mean\\3\\comb_10.json",
+        "dataset": "zafras_m",
+        "tipo": "mean",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafras_m\\max\\4\\comb_3.json",
+        "dataset": "zafras_m",
+        "tipo": "max",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafras_m\\mean\\4\\comb_17.json",
+        "dataset": "zafras_m",
+        "tipo": "mean",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafras_m\\max\\5\\comb_1.json",
+        "dataset": "zafras_m",
+        "tipo": "max",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafras_m\\mean\\5\\comb_11.json",
+        "dataset": "zafras_m",
+        "tipo": "mean",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafras_m\\mean\\6\\comb_6.json",
+        "dataset": "zafras_m",
+        "tipo": "mean",
+        "var_nums": "6"
+    },
+    {
+        "file": "score_mlr\\zafras_m\\mean\\7\\comb_1.json",
+        "dataset": "zafras_m",
+        "tipo": "mean",
+        "var_nums": "7"
+    },
+    {
+        "file": "score_mlr\\zafras_r\\max\\2\\comb_6.json",
+        "dataset": "zafras_r",
+        "tipo": "max",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafras_r\\mean\\2\\comb_16.json",
+        "dataset": "zafras_r",
+        "tipo": "mean",
+        "var_nums": "2"
+    },
+    {
+        "file": "score_mlr\\zafras_r\\max\\3\\comb_7.json",
+        "dataset": "zafras_r",
+        "tipo": "max",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafras_r\\mean\\3\\comb_33.json",
+        "dataset": "zafras_r",
+        "tipo": "mean",
+        "var_nums": "3"
+    },
+    {
+        "file": "score_mlr\\zafras_r\\max\\4\\comb_5.json",
+        "dataset": "zafras_r",
+        "tipo": "max",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafras_r\\mean\\4\\comb_11.json",
+        "dataset": "zafras_r",
+        "tipo": "mean",
+        "var_nums": "4"
+    },
+    {
+        "file": "score_mlr\\zafras_r\\max\\5\\comb_1.json",
+        "dataset": "zafras_r",
+        "tipo": "max",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafras_r\\mean\\5\\comb_11.json",
+        "dataset": "zafras_r",
+        "tipo": "mean",
+        "var_nums": "5"
+    },
+    {
+        "file": "score_mlr\\zafras_r\\mean\\6\\comb_1.json",
+        "dataset": "zafras_r",
+        "tipo": "mean",
+        "var_nums": "6"
+    },
+    {
+        "file": "score_mlr\\zafras_r\\mean\\7\\comb_1.json",
+        "dataset": "zafras_r",
+        "tipo": "mean",
+        "var_nums": "7"
+    }
+]

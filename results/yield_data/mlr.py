@@ -3,45 +3,96 @@ import pandas as pd
 import statsmodels.api as sm
 from sklearn.model_selection import train_test_split
 import math
+import itertools
+import json
+from os import makedirs
 
-ds = PurePath(r'data/zafras_modelado.csv')
+var_type = input('Tipo de variable (max o mean): ')
+var_num = int(input('Número de variables: '))
 
-exit_file = ds.name.split('.')[0] + '_mlr.csv'
-
+ds = PurePath(r'data/zafra2122_2223_r.csv')
 df = pd.read_csv(ds)
 
-num_vars = int(input('Número de variables: '))
+max_cols = []
+mean_cols = []
 
-# Recoger las variables del usuario
-variables = []
-for i in range(num_vars):
-    var = input(f'Variable {i+1}: ')
-    variables.append(var)
+for i in df.columns:
+    if 'max' in i:
+        max_cols.append(i)
+    elif 'mean' in i:
+        mean_cols.append(i)
+print(len(max_cols), len(mean_cols))
 
-model_metadata = pd.DataFrame(columns=['vars', 'aic', 'rsquared', 'mse', 'rmse'])
+# Combinaciones de variables
+max_comb = list(itertools.combinations(max_cols, var_num))
+mean_comb = list(itertools.combinations(mean_cols, var_num))
 
-x = df[variables]
-y = df['rendimiento']
+if var_type == 'max':
+    i = 1
+    for comb in max_comb:
+        x = df[list(comb)]
+        y = df['rendimiento']
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
-model = sm.OLS(y_train, sm.add_constant(x_train)).fit()
-print(model.summary())
-y_pred = model.predict(sm.add_constant(x))
-df['pred'] = y_pred
-model_aic = model.aic
-params = model.params
-p_vals = model.pvalues
-r2 = model.rsquared
+        model = sm.OLS(y_train, sm.add_constant(x_train)).fit()
+        # print(f'Comb {i}: {model.summary()}')
+        # noinspection PyTypeChecker
+        summary_dict = {
+            "coefs": model.params.to_dict(),
+            "p_values": model.pvalues.to_dict(),
+            "rsquared": model.rsquared,
+            "aic": model.aic,
+            "fvalue": model.fvalue,
+            "f_pvalue": model.f_pvalue,
+            "mse_model": model.mse_model,
+            "rmse_model": math.sqrt(model.mse_model)
+        }
+        summary_json = json.dumps(summary_dict, indent=4)
+        filepath_score = PurePath(r'score_mlr', ds.stem, var_type, str(var_num))
+        makedirs(filepath_score, exist_ok=True)
+        with open(PurePath(filepath_score, f'comb_{i}.json'), 'w') as f:
+            f.write(summary_json)
 
-model_metadata = model_metadata._append({'vars': variables,
-                                         'aic': model_aic,
-                                         'rsquared': r2,
-                                         'mse': model.mse_model,
-                                         'rmse': math.sqrt(model.mse_model)},
-                                        ignore_index=True)
-print(model_metadata)
-print(df)
-#model_metadata.to_csv(PurePath(r'C:\Users\Isai\Documents\Tesis\code\results\yield_data\mlr\metrics', f"{var1}&{var2}_{exit_file}"), index=False)
-#export_df = df[['parcela', 'rendimiento', f'{var1}', f'{var2}', f'{var1}&{var2}_pred']]
-#export_df.to_csv(PurePath(r'C:\Users\Isai\Documents\Tesis\code\results\yield_data\mlr\predicts', f"{var1}&{var2}_{exit_file}"), index=False)
+        # predicciones
+        y_pred = model.predict(sm.add_constant(x))
+        df['pred'] = y_pred
+        filepath_predict = PurePath(r'predicts_mlr', ds.stem, var_type, str(var_num))
+        makedirs(filepath_predict, exist_ok=True)
+        df.to_csv(PurePath(filepath_predict, f'comb_{i}.csv'), index=False)
+
+        i += 1
+elif var_type == 'mean':
+    i = 1
+    for comb in mean_comb:
+        x = df[list(comb)]
+        y = df['rendimiento']
+
+        x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
+
+        model = sm.OLS(y_train, sm.add_constant(x_train)).fit()
+        # print(f'Comb {i}: {model.summary()}')
+        # noinspection PyTypeChecker
+        summary_dict = {
+            "coefs": model.params.to_dict(),
+            "p_values": model.pvalues.to_dict(),
+            "rsquared": model.rsquared,
+            "aic": model.aic,
+            "fvalue": model.fvalue,
+            "f_pvalue": model.f_pvalue,
+            "mse_model": model.mse_model,
+            "rmse_model": math.sqrt(model.mse_model)
+        }
+        summary_json = json.dumps(summary_dict, indent=4)
+        filepath = PurePath(r'score_mlr', ds.stem, var_type, str(var_num))
+        makedirs(filepath, exist_ok=True)
+        with open(PurePath(filepath, f'comb_{i}.json'), 'w') as f:
+            f.write(summary_json)
+
+            # predicciones
+            y_pred = model.predict(sm.add_constant(x))
+            df['pred'] = y_pred
+            filepath_predict = PurePath(r'predicts_mlr', ds.stem, var_type, str(var_num))
+            makedirs(filepath_predict, exist_ok=True)
+            df.to_csv(PurePath(filepath_predict, f'comb_{i}.csv'), index=False)
+        i += 1
