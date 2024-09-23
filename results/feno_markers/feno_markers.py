@@ -35,8 +35,8 @@ zafra_df = pd.DataFrame(columns=[
 for i in modelados_files:
     for j in reales_files:
         if i[1] == j[1]:
-            i[0]['Fecha'] = pd.to_datetime(i[0]['Fecha'])
-            j[0]['Fecha'] = pd.to_datetime(j[0]['Fecha'])
+            i[0]['Fecha'] = pd.to_datetime(i[0]['Fecha']) # Modelados
+            j[0]['Fecha'] = pd.to_datetime(j[0]['Fecha']) # Reales
             model_var = i[0][vi_var]
             real_var = j[0][f"{vi_var}_mean"]
             pos_model = model_var.max()
